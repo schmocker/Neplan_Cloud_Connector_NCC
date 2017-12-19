@@ -1,0 +1,7 @@
+; DemoExampleNLP.def : Declares the module parameters for the DLL.
+
+LIBRARY      "DemoExampleNLP"
+
+EXPORTS
+    ; Explicit exports can go here
+	RunNeplanScript  @1

@@ -1,0 +1,3 @@
+﻿  stdafx.cpp
+  NPL3.cpp
+v:\development\visual c++\naplanmatlab\npl3\npl3\npl3.cpp(16): error C2491: "RunNeplanScript": Definition von Funktion für dllimport nicht zulässig
