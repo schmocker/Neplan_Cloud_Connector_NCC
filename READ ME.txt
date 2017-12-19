@@ -1,0 +1,1 @@
+the example for the exercise (Neplan Beispiel.nep360) needs to be imported into Neplan via tha GUI
