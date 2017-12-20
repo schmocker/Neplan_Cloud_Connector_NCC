@@ -1,2 +1,3 @@
-h=5;
-r=h^2;
+
+
+asminfo = NET.addAssembly('dotNET_Library/dotNET_Library/bin/Release/netstandard2.0/dotNET_Library.dll')
