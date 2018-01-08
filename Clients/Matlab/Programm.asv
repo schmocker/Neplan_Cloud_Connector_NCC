@@ -1,0 +1,16 @@
+
+
+fnc = 'setUsername';
+input.username = 'christoph.hunziker@fhnw.ch';
+client.send(fnc,input)
+
+
+fnc = 'setUsername';
+input.username = 'christoph.hunziker@fhnw.ch';
+client.send(fnc,input)
+
+
+fnc = 'setUsername';
+input.username = 'christoph.hunziker@fhnw.ch';
+client.send(fnc,input)
+

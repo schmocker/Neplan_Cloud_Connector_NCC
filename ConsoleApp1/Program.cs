@@ -7,50 +7,74 @@ using System.Threading.Tasks;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
-namespace ConsoleApp1
+namespace NeplanMqttService
 {
     class Program
     {
-        public static String url = "tcp://www.tobiasschmocker.ch";
-        public static String topic = "Neplan";
-        public static IPAddress ip;
-        public static MqttClient client;
+        public static Mqtt_Client client;
+        public static Webservice webservice;
 
         static void Main(string[] args)
         {
+            Console.WriteLine("%%%%% Start %%%%%");
 
-            // get ip-adress of url
-            Uri Uri = new Uri(url);
-            ip = Dns.GetHostAddresses(Uri.Host)[0];
+            client = new Mqtt_Client();
+            Console.WriteLine("- MQTT connectioon details:");
+            Console.WriteLine("broker: " + Mqtt_Client.url + "(preset in C#)");
+            Console.WriteLine("topic:  " + Mqtt_Client.topic + "(preset in C#)");
+            Console.WriteLine(" ");
 
-
-            client = new MqttClient(ip);
-
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
-
-            string clientId = Guid.NewGuid().ToString();
-            client.Connect(clientId);
-
-            client.Subscribe(new string[] { "Neplan/toService" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            Console.WriteLine("- Neplan Server:");
+            Console.WriteLine("Server:   https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc (preset in C#)");
+            Console.WriteLine("username: not set (pending via mqtt)");
+            Console.WriteLine("password: not set (pending via mqtt)");
+            Console.WriteLine("project:  not set (pending via mqtt)");
+            Console.WriteLine(" ");
 
         }
 
-        static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        public static void HandleCommand (string id, string fnc, Dictionary<string, string> pars)
         {
-            // handle message received
-            
-            // decode input
-            String input = System.Text.Encoding.UTF8.GetString(e.Message);
-            Console.WriteLine(input);
+            Console.WriteLine("%%%%% new command received %%%%%");
+            Console.WriteLine("- function: " + fnc);
 
-            // do command
+            Dictionary<string, string> output = new Dictionary<string, string>();
+            output["id"] = id;
+            output["status"] = "received";
+            Mqtt_Client.Publish(output);
 
-            // encode output
-            String strValue = "rwhgpuhGPUHG55";
-            byte[] output = Encoding.UTF8.GetBytes(strValue);
-            //return values
+            switch (fnc)
+            {
+                case "openWebservice":
+                    string username = pars["username"];
+                    string password = pars["password"];
+                    string project = pars["project"];
+                    webservice = new Webservice(username, password, project);
+                    output["webservice"] = "connected";
+                    break;
+                case "closeWebservice":
+                    webservice.CloseWebservice();
+                    output["webservice"] = "disconnected";
+                    break;
+                default:
+                    output["error"] = "invalid function";
+                    Console.WriteLine(output["error"]);
+                    break;
+            }
 
-            client.Publish("Neplan/fromService", output, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+
+
+
+            Console.WriteLine(" ");
+
+            output["status"] = "done";
+            Mqtt_Client.Publish(output);
         }
+
+
+
     }
+
+
+
 }
