@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ExternalProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AngleXY" type="xs:double" />
+      <xs:element minOccurs="0" name="AreaID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CalcNameID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoordinateUnits" type="xs:int" />
+      <xs:element minOccurs="0" name="DiagramID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectionUpY" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FactorXY" type="xs:double" />
+      <xs:element minOccurs="0" name="GraphicLayerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImportWithGraphic" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LayerMinX" type="xs:double" />
+      <xs:element minOccurs="0" name="LayerMinY" type="xs:double" />
+      <xs:element minOccurs="0" name="LayerUnitXY" type="xs:short" />
+      <xs:element minOccurs="0" name="LibraryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LibrarySubname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDiagram" type="xs:int" />
+      <xs:element minOccurs="0" name="NumGraphic" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SridID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubAreaID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariantID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+      <xs:element minOccurs="0" name="WorldCoordMaxX" type="xs:double" />
+      <xs:element minOccurs="0" name="WorldCoordMaxY" type="xs:double" />
+      <xs:element minOccurs="0" name="WorldCoordMinX" type="xs:double" />
+      <xs:element minOccurs="0" name="WorldCoordMinY" type="xs:double" />
+      <xs:element minOccurs="0" name="ZoneID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExternalProject" nillable="true" type="tns:ExternalProject" />
+  <xs:complexType name="LoadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnectionType" type="xs:short" />
+      <xs:element minOccurs="0" name="LfType" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumCustomers" type="xs:int" />
+      <xs:element minOccurs="0" name="Phase" type="xs:short" />
+      <xs:element minOccurs="0" name="ScalingType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" type="xs:short" />
+      <xs:element minOccurs="0" name="Value1" type="xs:double" />
+      <xs:element minOccurs="0" name="Value2" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoadData" nillable="true" type="tns:LoadData" />
+  <xs:complexType name="WaterLoadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoadType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QDemand" type="xs:double" />
+      <xs:element minOccurs="0" name="Qunit" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WaterLoadData" nillable="true" type="tns:WaterLoadData" />
+  <xs:complexType name="ArrayOfLineSectionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineSectionData" nillable="true" type="tns:LineSectionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLineSectionData" nillable="true" type="tns:ArrayOfLineSectionData" />
+  <xs:complexType name="LineSectionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CableOrOHL" type="xs:short" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diameter" type="xs:double" />
+      <xs:element minOccurs="0" name="InstallationYear" type="xs:int" />
+      <xs:element minOccurs="0" name="Layout" type="xs:short" />
+      <xs:element minOccurs="0" name="Length" type="xs:double" />
+      <xs:element minOccurs="0" name="LibraryType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LineSectionData" nillable="true" type="tns:LineSectionData" />
+  <xs:complexType name="ArrayOfLoadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoadData" nillable="true" type="tns:LoadData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoadData" nillable="true" type="tns:ArrayOfLoadData" />
+  <xs:complexType name="AnalysisParameterSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnschlKnID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CalcOnlyLoadedData" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DoRecondResizing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EleID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ExcludeElementsInMaint" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExcludeElementsInstalled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExcludeOutOfOperElements" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExcludeProjectedElements" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExclutionDateForInstalled" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExclutionDateForOutOfOper" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IncludeBoundaryElementsInCalculation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemTypeNameForRecondResizingField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemlibNameForRecondResizing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemlibSubNameForRecondResizing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LibItemTypeNameForRecondResizing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LibNameForRecondResizing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LibSubNameForRecondResizing" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListOfRelayIDs" nillable="true" type="q1:ArrayOfguid" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListOfSelectedFeederIDs" nillable="true" type="q2:ArrayOfguid" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListOfSelectedPartNetwIDs" nillable="true" type="q3:ArrayOfguid" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListOfShortCircuitLocationIDs" nillable="true" type="q4:ArrayOfguid" />
+      <xs:element minOccurs="0" name="LogName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediumType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NCalc" type="xs:int" />
+      <xs:element minOccurs="0" name="RelayID" nillable="true" type="ser:guid" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SelectedRecondResizElements" nillable="true" type="q5:ArrayOfguid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnalysisParameterSettings" nillable="true" type="tns:AnalysisParameterSettings" />
+  <xs:complexType name="AnalysisReturnInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedLoadsFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnalysisID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnalysisModule" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AutomaticSettingsResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CableSizingLineDataResult" nillable="true" type="tns:ArrayOfAnalysisReturnInfo.CableSizingLineData" />
+      <xs:element minOccurs="0" name="ConXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultCleared" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasConverged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoadSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogFilename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetworkReductionXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationalDataName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelayData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ResultFile2ButtonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultFile2Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultFilename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnInfo" type="xs:int" />
+      <xs:element minOccurs="0" name="RunAnalysisWithoutSavingToDB" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SelectivityChartResults" nillable="true" type="tns:ArrayOfAnalysisReturnInfo.RelayResultData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnalysisReturnInfo" nillable="true" type="tns:AnalysisReturnInfo" />
+  <xs:complexType name="ArrayOfAnalysisReturnInfo.CableSizingLineData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnalysisReturnInfo.CableSizingLineData" nillable="true" type="tns:AnalysisReturnInfo.CableSizingLineData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnalysisReturnInfo.CableSizingLineData" nillable="true" type="tns:ArrayOfAnalysisReturnInfo.CableSizingLineData" />
+  <xs:complexType name="AnalysisReturnInfo.CableSizingLineData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BinaryData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="LibType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnalysisReturnInfo.CableSizingLineData" nillable="true" type="tns:AnalysisReturnInfo.CableSizingLineData" />
+  <xs:complexType name="ArrayOfAnalysisReturnInfo.RelayResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnalysisReturnInfo.RelayResultData" nillable="true" type="tns:AnalysisReturnInfo.RelayResultData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnalysisReturnInfo.RelayResultData" nillable="true" type="tns:ArrayOfAnalysisReturnInfo.RelayResultData" />
+  <xs:complexType name="AnalysisReturnInfo.RelayResultData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ElementId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Factor" type="xs:double" />
+      <xs:element minOccurs="0" name="FaultedNodeId" type="ser:guid" />
+      <xs:element minOccurs="0" name="I" type="xs:double" />
+      <xs:element minOccurs="0" name="Iang" type="xs:double" />
+      <xs:element minOccurs="0" name="R" type="xs:double" />
+      <xs:element minOccurs="0" name="RelayId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TripTime" type="xs:double" />
+      <xs:element minOccurs="0" name="TypeSC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U" type="xs:double" />
+      <xs:element minOccurs="0" name="Un" type="xs:double" />
+      <xs:element minOccurs="0" name="X" type="xs:double" />
+      <xs:element minOccurs="0" name="Z" type="xs:double" />
+      <xs:element minOccurs="0" name="Zang" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnalysisReturnInfo.RelayResultData" nillable="true" type="tns:AnalysisReturnInfo.RelayResultData" />
+</xs:schema>

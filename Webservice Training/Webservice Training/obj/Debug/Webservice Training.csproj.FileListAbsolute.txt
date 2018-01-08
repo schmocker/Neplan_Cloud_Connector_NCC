@@ -1,0 +1,16 @@
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/bin/Debug/Webservice Training.exe.config
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/bin/Debug/Webservice Training.exe
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/bin/Debug/Webservice Training.pdb
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/obj/Debug/Webservice Training.csprojResolveAssemblyReference.cache
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/obj/Debug/Webservice Training.csproj.CoreCompileInputs.cache
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/obj/Debug/Webservice Training.exe
+/Users/tobias.schmocker/Desktop/Webservice Training/Webservice Training/obj/Debug/Webservice Training.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Debug\Webservice Training.exe.config
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Debug\Webservice Training.exe
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Debug\Webservice Training.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Debug\Webservice Training.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Debug\Webservice Training.exe
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Debug\Webservice Training.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Debug\M2Mqtt.Net.dll
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Debug\M2Mqtt.Net.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Debug\Webservice Training.csprojResolveAssemblyReference.cache

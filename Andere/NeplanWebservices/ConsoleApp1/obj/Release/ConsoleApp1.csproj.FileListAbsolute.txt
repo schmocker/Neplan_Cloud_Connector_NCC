@@ -1,0 +1,2 @@
+\\Mac\Home\Desktop\NeplanWebservices\ConsoleApp1\obj\Release\ConsoleApp1.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\NeplanWebservices\ConsoleApp1\obj\Release\ConsoleApp1.csproj.CoreCompileInputs.cache

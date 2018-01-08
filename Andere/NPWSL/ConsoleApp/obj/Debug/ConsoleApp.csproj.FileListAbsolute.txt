@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\ConsoleApp.exe
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\ConsoleApp.pdb
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\NPWSL.dll
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\NPWSL.pdb
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\bin\Debug\NPWSL.dll.config
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\obj\Debug\ConsoleApp.exe
+\\Mac\Home\Desktop\NPWSL\ConsoleApp\obj\Debug\ConsoleApp.pdb

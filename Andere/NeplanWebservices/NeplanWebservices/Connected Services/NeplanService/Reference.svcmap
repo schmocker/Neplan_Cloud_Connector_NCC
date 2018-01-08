@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9b69f6de-589a-4256-91a1-1c05116eabe5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NeplanService.xsd" MetadataType="Schema" ID="b8b4d24b-3395-4644-8b29-1339867d62be" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NeplanService1.xsd" MetadataType="Schema" ID="f8c77f10-e8b7-4040-beea-de103db8864e" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd6" />
+    <MetadataFile FileName="NeplanService2.xsd" MetadataType="Schema" ID="9c14107d-a231-4da1-976e-7cd422908dea" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NeplanService3.xsd" MetadataType="Schema" ID="1e01f1e4-307c-4b62-9655-01dac3841614" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd5" />
+    <MetadataFile FileName="NeplanService.wsdl" MetadataType="Wsdl" ID="867416b8-d1a0-4b47-9f1c-2c7701cc8a5e" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?wsdl" />
+    <MetadataFile FileName="NeplanService4.xsd" MetadataType="Schema" ID="82720519-cd10-40b0-aa3f-e81d570691f3" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd8" />
+    <MetadataFile FileName="NeplanService5.xsd" MetadataType="Schema" ID="a808f548-7ded-4930-881e-ca9e3d8a04a9" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="NeplanService6.xsd" MetadataType="Schema" ID="ec2d5230-65a8-44b9-bc46-442225f820cf" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd4" />
+    <MetadataFile FileName="NeplanService.disco" MetadataType="Disco" ID="71f7059a-1994-4c84-a148-daef84456475" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?disco" />
+    <MetadataFile FileName="NeplanService1.wsdl" MetadataType="Wsdl" ID="df78c4c8-673c-4d8d-a7d5-72a84d9f3734" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="NeplanService7.xsd" MetadataType="Schema" ID="b2f770bd-f3c2-4b9d-bad1-89a2c12bf6f7" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd7" />
+    <MetadataFile FileName="NeplanService8.xsd" MetadataType="Schema" ID="0dcbe6de-f99f-49b0-aeb3-503ec316d7fd" SourceId="1" SourceUrl="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

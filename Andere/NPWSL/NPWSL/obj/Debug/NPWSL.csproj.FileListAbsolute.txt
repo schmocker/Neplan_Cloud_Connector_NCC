@@ -1,0 +1,7 @@
+\\Mac\Home\Desktop\NPWSL\NPWSL\bin\Debug\NPWSL.dll.config
+\\Mac\Home\Desktop\NPWSL\NPWSL\bin\Debug\NPWSL.dll
+\\Mac\Home\Desktop\NPWSL\NPWSL\bin\Debug\NPWSL.pdb
+\\Mac\Home\Desktop\NPWSL\NPWSL\obj\Debug\NPWSL.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\NPWSL\NPWSL\obj\Debug\NPWSL.dll
+\\Mac\Home\Desktop\NPWSL\NPWSL\obj\Debug\NPWSL.pdb
+\\Mac\Home\Desktop\NPWSL\NPWSL\obj\Debug\NPWSL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,13 @@
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ConsoleApp.exe
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ConsoleApp.pdb
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\NeplanWebservices3.dll
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\NeplanWebservices3.pdb
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\NeplanWebservices3.dll.config
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\obj\Debug\ConsoleApp.exe
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\obj\Debug\ConsoleApp.pdb
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ClassLibrary1.dll
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ClassLibrary1.pdb
+\\Mac\Home\Desktop\NeplanWebservices3\ConsoleApp\bin\Debug\ClassLibrary1.dll.config
