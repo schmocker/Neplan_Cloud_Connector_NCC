@@ -1,7 +1,0 @@
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\bin\Debug\NeplanWebservices3.dll.config
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\bin\Debug\NeplanWebservices3.dll
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\bin\Debug\NeplanWebservices3.pdb
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\obj\Debug\NeplanWebservices3.csprojResolveAssemblyReference.cache
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\obj\Debug\NeplanWebservices3.csproj.CoreCompileInputs.cache
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\obj\Debug\NeplanWebservices3.dll
-\\Mac\Home\Desktop\NeplanWebservices3\NeplanWebservices3\obj\Debug\NeplanWebservices3.pdb

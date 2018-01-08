@@ -1,7 +1,0 @@
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-\\Mac\Home\Desktop\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
