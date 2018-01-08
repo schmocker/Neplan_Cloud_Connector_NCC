@@ -1,0 +1,7 @@
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\bin\Release\NeplanWebservices.dll.config
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\bin\Release\NeplanWebservices.dll
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\bin\Release\NeplanWebservices.pdb
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\obj\Release\NeplanWebservices.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\obj\Release\NeplanWebservices.dll
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\obj\Release\NeplanWebservices.pdb
+\\Mac\Home\Desktop\NeplanWebservices\NeplanWebservices\obj\Release\NeplanWebservices.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ClassLibrary1.dll
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ClassLibrary1.pdb
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\bin\Debug\ClassLibrary1.dll.config
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+\\Mac\Home\Desktop\ClassLibrary1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

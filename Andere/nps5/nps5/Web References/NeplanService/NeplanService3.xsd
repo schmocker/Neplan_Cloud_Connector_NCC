@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" />
+  <xs:complexType name="ArrayOfImportElementItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportElementItem" nillable="true" type="ImportElementItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImportElementItem" nillable="true" type="ArrayOfImportElementItem" />
+  <xs:complexType name="ImportElementItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Bay" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BayesInStation" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="CableOrOHL" type="xs:short" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLabel1" nillable="true" type="q2:ArrayOfdouble" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLabel2" nillable="true" type="q3:ArrayOfdouble" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLabel3" nillable="true" type="q4:ArrayOfdouble" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLabel4" nillable="true" type="q5:ArrayOfdouble" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLink1" nillable="true" type="q6:ArrayOfdouble" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLink2" nillable="true" type="q7:ArrayOfdouble" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesLink3" nillable="true" type="q8:ArrayOfdouble" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CoordinatesSymbol" nillable="true" type="q9:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="Diameter" type="xs:double" />
+      <xs:element minOccurs="0" name="ElementInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Elevation" type="xs:double" />
+      <xs:element minOccurs="0" name="InstallationYear" type="xs:int" />
+      <xs:element minOccurs="0" name="IsForwardNetwork" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInMaintenance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsProjected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Layout" type="xs:short" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" minOccurs="0" name="Load" nillable="true" type="q10:LoadData" />
+      <xs:element minOccurs="0" name="LogicalSwitch" type="xs:int" />
+      <xs:element minOccurs="0" name="Material" type="xs:short" />
+      <xs:element minOccurs="0" name="NodeName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeName3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeName4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnGraphicLayer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnPortNr" type="xs:short" />
+      <xs:element minOccurs="0" name="SubAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Substation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SymbolAngle" type="xs:double" />
+      <xs:element minOccurs="0" name="SymbolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SymbolSize" type="xs:double" />
+      <xs:element minOccurs="0" name="TechDataValues" nillable="true" type="ArrayOfTechDataValue" />
+      <xs:element minOccurs="0" name="Type" type="xs:short" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" minOccurs="0" name="WaterLoadData" nillable="true" type="q11:WaterLoadData" />
+      <xs:element minOccurs="0" name="ZOrderNum" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ZoneName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aliasName1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aliasName2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="binaryData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elementType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="length" type="xs:double" />
+      <xs:element minOccurs="0" name="libraryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="librarySubname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="libraryType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="librayType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" minOccurs="0" name="listLineSections" nillable="true" type="q12:ArrayOfLineSectionData" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/BCP.Neplan.Web.Models.External" minOccurs="0" name="listSubLoads" nillable="true" type="q13:ArrayOfLoadData" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numConnections" type="xs:short" />
+      <xs:element minOccurs="0" name="phase" type="xs:short" />
+      <xs:element minOccurs="0" name="remove" type="xs:boolean" />
+      <xs:element minOccurs="0" name="un" type="xs:double" />
+      <xs:element minOccurs="0" name="xmlData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlInvest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlItemList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yLocation" nillable="true" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportElementItem" nillable="true" type="ImportElementItem" />
+  <xs:complexType name="ArrayOfTechDataValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TechDataValue" nillable="true" type="TechDataValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTechDataValue" nillable="true" type="ArrayOfTechDataValue" />
+  <xs:complexType name="TechDataValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TechDataValue" nillable="true" type="TechDataValue" />
+  <xs:complexType name="ArrayOfImportFeederItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportFeederItem" nillable="true" type="ImportFeederItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImportFeederItem" nillable="true" type="ArrayOfImportFeederItem" />
+  <xs:complexType name="ImportFeederItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PloadFactor" type="xs:double" />
+      <xs:element minOccurs="0" name="QloadFactor" type="xs:double" />
+      <xs:element minOccurs="0" name="atElementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="atNodeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportFeederItem" nillable="true" type="ImportFeederItem" />
+</xs:schema>

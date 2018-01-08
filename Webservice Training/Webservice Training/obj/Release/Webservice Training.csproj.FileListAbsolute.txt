@@ -1,0 +1,9 @@
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Release\Webservice Training.exe.config
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Release\Webservice Training.exe
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Release\Webservice Training.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Release\Webservice Training.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Release\Webservice Training.exe
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Release\Webservice Training.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Release\M2Mqtt.Net.dll
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\bin\Release\M2Mqtt.Net.pdb
+\\Mac\Home\Desktop\Webservice Training\Webservice Training\obj\Release\Webservice Training.csprojResolveAssemblyReference.cache

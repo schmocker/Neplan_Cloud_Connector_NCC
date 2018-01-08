@@ -1,9 +1,0 @@
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/bin/Release/netstandard2.0/dotNET_Library.deps.json
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/bin/Release/netstandard2.0/dotNET_Library.dll
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/bin/Release/netstandard2.0/dotNET_Library.pdb
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.csprojResolveAssemblyReference.cache
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.csproj.CoreCompileInputs.cache
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.AssemblyInfoInputs.cache
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.AssemblyInfo.cs
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.dll
-/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/dotNET_Library/dotNET_Library/obj/Release/netstandard2.0/dotNET_Library.pdb

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ImportProjectContainer" nillable="true" type="ImportProjectContainer" />
+  <xs:complexType name="ImportProjectContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BusFrequency" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="GraphicScalingFactor" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DiagramName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProjectLibrayName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CopySettingsFromProjectName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DoReduceLines" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DoPhaseBalancing" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DoBuildLineSections" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ImportWithGraphic" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsAsymmetricalNetwork" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ScalingTrafoFactor" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CalcWithLoadBalance" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="YAxesIsUp" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CoordinateUnits" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LibraryName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LibrarySubname" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProjectionDefault" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProjectionActual" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MapServer" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsSchematicNetwork" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ShowLogSwitch" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="AutoCalculationLengths" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FeederList" type="ArrayOfImportFeederItem" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ElementList" type="ArrayOfImportElementItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfImportFeederItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportFeederItem" nillable="true" type="ImportFeederItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ImportFeederItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="atNodeName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="atElementName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="color" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PloadFactor" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="QloadFactor" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfImportElementItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportElementItem" nillable="true" type="ImportElementItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ImportElementItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="un" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="length" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Diameter" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Material" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CableOrOHL" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="aliasName1" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="aliasName2" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="xmlData" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="binaryData" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="elementType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="libraryType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="libraryName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="librarySubname" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NodeName1" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NodeName2" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NodeName3" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NodeName4" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="OnPortNr" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoordinatesSymbol" type="ArrayOfDouble" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoordinatesLink1" type="ArrayOfDouble" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoordinatesLink2" type="ArrayOfDouble" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoordinatesLink3" type="ArrayOfDouble" />
+      <xs:element minOccurs="0" maxOccurs="1" name="xmlItemList" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="xmlInvest" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OnGraphicLayer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SymbolName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SymbolAngle" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SymbolSize" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="numConnections" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="phase" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ZoneName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AreaName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SubAreaName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LogicalSwitch" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsProjected" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsInMaintenance" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsForwardNetwork" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Elevation" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="InstallationYear" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Layout" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Substation" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Bay" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BayesInStation" type="ArrayOfString" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ElementInfo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="listSubLoads" type="ArrayOfLoadData" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Load" type="LoadData" />
+      <xs:element minOccurs="0" maxOccurs="1" name="WaterLoadData" type="WaterLoadData" />
+      <xs:element minOccurs="0" maxOccurs="1" name="listLineSections" type="ArrayOfLineSectionData" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TechDataValues" type="ArrayOfTechDataValue" />
+      <xs:element minOccurs="1" maxOccurs="1" name="xLocation" nillable="true" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="yLocation" nillable="true" type="xs:float" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="ZOrderNum" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfDouble">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="double" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLoadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoadData" nillable="true" type="LoadData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoadData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LfType" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Unit" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Phase" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumCustomers" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ScalingType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ConnectionType" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value1" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Value2" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WaterLoadData">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="QDemand" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Qunit" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LoadType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLineSectionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LineSectionData" nillable="true" type="LineSectionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineSectionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LibraryType" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Length" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Diameter" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Material" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CableOrOHL" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="InstallationYear" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Layout" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfTechDataValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TechDataValue" nillable="true" type="TechDataValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TechDataValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="VariableName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Value" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
