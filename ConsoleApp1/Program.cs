@@ -11,16 +11,20 @@ namespace ConsoleApp1
 {
     class Program
     {
+        public static String url = "tcp://www.tobiasschmocker.ch";
+        public static String topic = "Neplan";
+        public static IPAddress ip;
         public static MqttClient client;
 
         static void Main(string[] args)
         {
-            String MQTT_BROKER_ADDRESS = "192.168.1.119";
+
+            // get ip-adress of url
+            Uri Uri = new Uri(url);
+            ip = Dns.GetHostAddresses(Uri.Host)[0];
 
 
-
-
-            client = new MqttClient(IPAddress.Parse(MQTT_BROKER_ADDRESS));
+            client = new MqttClient(ip);
 
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
 

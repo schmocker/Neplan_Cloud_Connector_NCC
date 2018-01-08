@@ -11,7 +11,11 @@ classdef MQTT_Client
     
     methods
         function obj = MQTT_Client()
-            obj.broker = mqtt(obj.broker_url);
+            try
+                obj.broker = mqtt(obj.broker_url);
+            catch
+                error('qweqw');
+            end
             obj.subscription = subscribe(obj.broker,...
                 [obj.topic, '/fromService'],...
                 'QoS', 1,...
