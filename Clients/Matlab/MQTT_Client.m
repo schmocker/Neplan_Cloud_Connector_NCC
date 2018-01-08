@@ -12,6 +12,8 @@ classdef MQTT_Client < handle
         fnc
         input
         msg
+        result
+        pending = false
     end
     
     methods
@@ -29,7 +31,7 @@ classdef MQTT_Client < handle
             
         end
         
-        function obj = receive(obj,src,evt)
+        function receive(obj,src,evt)
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
             msg = jsondecode(evt{1});
@@ -38,10 +40,17 @@ classdef MQTT_Client < handle
             else
                 disp('server sent results');
                 fprintf('\n');
+                obj.pending = false;
+                if isfield(msg,'result')
+                    obj.result = msg.result;
+                else
+                    obj.result = [];
+                end
             end
         end
         
-        function obj = send(obj)
+        function result = send(obj)
+            
             obj.msg.id = obj.msg.id + 1;
             obj.msg.fnc = obj.fnc;
             obj.msg.input = jsonencode(obj.input);
@@ -50,6 +59,10 @@ classdef MQTT_Client < handle
             obj.fnc = "";
             obj.input = struct;
             disp('--- new query sent');
+            
+            obj.pending = true;
+            waitfor(obj,'pending',false);
+            result =  obj.result;
         end
     end
     
