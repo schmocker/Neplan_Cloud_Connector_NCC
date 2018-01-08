@@ -18,6 +18,8 @@ namespace ConsoleApp1
             String MQTT_BROKER_ADDRESS = "192.168.1.119";
 
 
+
+
             client = new MqttClient(IPAddress.Parse(MQTT_BROKER_ADDRESS));
 
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
