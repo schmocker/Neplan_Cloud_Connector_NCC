@@ -37,16 +37,16 @@ namespace NeplanMqttService
         {
             // handle message received
             string message_json = System.Text.Encoding.UTF8.GetString(e.Message);
-            Dictionary<string, string> message = JsonConvert.DeserializeObject<Dictionary<string, string>>(message_json);
+            Dictionary<string, object> message = JsonConvert.DeserializeObject<Dictionary<string, object>>(message_json);
 
-            string fnc = message["fnc"];
-            string id = message["id"];
-            Dictionary<string, string> pars = JsonConvert.DeserializeObject<Dictionary<string, string>>(message["input"]);
+            string fnc = message["fnc"].ToString();
+            string id = message["id"].ToString();
+            Dictionary<string, object> pars = JsonConvert.DeserializeObject<Dictionary<string, object>>(message["input"].ToString());
 
             Program.HandleCommand(id, fnc, pars);
         }
 
-        public static void Publish(Dictionary<string, string> output)
+        public static void Publish(Dictionary<string, object> output)
         {
             string msg_json = JsonConvert.SerializeObject(output, Formatting.Indented);
             byte[] msg_bytes = Encoding.UTF8.GetBytes(msg_json);

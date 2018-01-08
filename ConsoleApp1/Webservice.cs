@@ -73,5 +73,6 @@ namespace NeplanMqttService
             return sBuilder.ToString();
             #endregion
         }
+        
     }
 }

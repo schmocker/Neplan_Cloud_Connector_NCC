@@ -37,11 +37,11 @@ namespace NeplanMqttService
 
         }
 
-        public static void HandleCommand (string id, string fnc, Dictionary<string, string> pars)
+        public static void HandleCommand (string id, string fnc, Dictionary<string, object> pars)
         {
             Console.WriteLine("%%%%% START: " + fnc + " %%%%%");
 
-            Dictionary<string, string> output = new Dictionary<string, string>();
+            Dictionary<string, object> output = new Dictionary<string, object>();
             output["id"] = id;
             output["status"] = "received";
             Mqtt_Client.Publish(output);
@@ -50,10 +50,7 @@ namespace NeplanMqttService
             switch (fnc)
             {
                 case "openWebservice":
-                    string username = pars["username"];
-                    string password = pars["password"];
-                    string projectName = pars["project"];
-                    webservice = new Webservice(username, password, projectName);
+                    webservice = new Webservice(pars["username"].ToString(), pars["password"].ToString(), pars["project"].ToString());
                     output["webservice"] = "connected";
                     break;
                 case "closeWebservice":
@@ -61,15 +58,10 @@ namespace NeplanMqttService
                     output["webservice"] = "disconnected";
                     break;
                 // functions from the neplan webservice
-                case "AnalyseVariant":
-                    output["result"] = AnalyseVariant(pars);
-                    break;
-                case "GetListResultSummary":
-                    output["result"] = GetListResultSummary(pars);
-                    break;
                 default:
-                    output["error"] = "invalid function";
-                    Console.WriteLine(output["error"]);
+                    Command command = new Command(webservice, fnc, pars);
+                    output["result"] = command.result;
+                    output["error"] = command.error;
                     break;
             }
             Console.WriteLine("- end processing");
@@ -82,47 +74,5 @@ namespace NeplanMqttService
             Console.WriteLine("%%%%% Finished %%%%%");
             Console.WriteLine(" ");
         }
-
-        // Funktionen
-        public static string AnalyseVariant(Dictionary<string, string> pars)
-        {
-            ExternalProject project = webservice.ext;
-            string analysisRefenceID = Guid.NewGuid().ToString();
-            string analysisModule = pars["analysisModule"];
-            string calcNameID = pars["calcNameID"];
-            string analysisMethode = pars["analysisMethode"];
-            string conditions = pars["conditions"];
-            string analysisLoadOptionXML = pars["analysisLoadOptionXML"];
-            AnalysisReturnInfo output = webservice.nepService.AnalyseVariant(
-                project,
-                analysisRefenceID,
-                analysisModule,
-                calcNameID,
-                analysisMethode,
-                conditions,
-                analysisLoadOptionXML);
-            return "";
-        }
-        public static string GetListResultSummary(Dictionary<string, string> pars)
-        {
-            ExternalProject project = webservice.ext;
-            string analysisType = pars["analysisType"];
-            DateTime simulationDateTime = new DateTime(); //  string to date - pending
-            int networkTypeGroup = Convert.ToInt32(pars["networkTypeGroup"]); //  string to int - done
-            string networkTypeGroupID = pars["networkTypeGroupID"];
-            string[] output = webservice.nepService.GetListResultSummary(
-                project, 
-                analysisType, 
-                simulationDateTime, 
-                networkTypeGroup, 
-                networkTypeGroupID);
-            return output[0];
-        }
-
-
-
     }
-
-
-
 }
