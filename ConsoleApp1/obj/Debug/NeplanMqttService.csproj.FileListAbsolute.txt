@@ -1,107 +1,321 @@
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Microsoft.Win32.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\netstandard.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.AppContext.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.Concurrent.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.NonGeneric.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.Specialized.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.EventBasedAsync.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.TypeConverter.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Console.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Data.Common.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Contracts.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Debug.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.FileVersionInfo.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Process.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.StackTrace.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Tools.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.TraceSource.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Tracing.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Drawing.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Dynamic.Runtime.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.Calendars.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.Extensions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Compression.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Compression.ZipFile.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.DriveInfo.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.Watcher.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.IsolatedStorage.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.MemoryMappedFiles.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Pipes.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.UnmanagedMemoryStream.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Expressions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Parallel.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Queryable.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Http.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.NameResolution.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.NetworkInformation.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Ping.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Requests.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Security.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Sockets.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebHeaderCollection.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebSockets.Client.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebSockets.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ObjectModel.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.Extensions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.Reader.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.ResourceManager.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.Writer.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Extensions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Handles.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.InteropServices.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Numerics.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Formatters.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Json.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Xml.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Claims.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Csp.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Principal.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.SecureString.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.Encoding.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.Encoding.Extensions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.RegularExpressions.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Overlapped.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Tasks.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Tasks.Parallel.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Thread.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.ThreadPool.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Timer.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ValueTuple.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.ReaderWriter.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XDocument.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XmlDocument.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XmlSerializer.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XPath.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XPath.XDocument.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\M2Mqtt.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.csprojResolveAssemblyReference.cache
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.csproj.CoreCompileInputs.cache
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.exe.config
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.exe
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.pdb
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.exe.config
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.exe
-C:\Users\tobias.schmocker\Documents\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.pdb
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Microsoft.Win32.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/netstandard.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.AppContext.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.Concurrent.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.NonGeneric.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.Specialized.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.TypeConverter.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Console.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Data.Common.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Contracts.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Debug.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Process.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.StackTrace.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Tools.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.TraceSource.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Tracing.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Drawing.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Dynamic.Runtime.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.Calendars.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.Extensions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Compression.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Compression.ZipFile.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.Watcher.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.IsolatedStorage.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.MemoryMappedFiles.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Pipes.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Expressions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Parallel.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Queryable.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Http.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.NameResolution.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.NetworkInformation.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Ping.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Requests.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Security.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Sockets.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebHeaderCollection.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebSockets.Client.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebSockets.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ObjectModel.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.Extensions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.Reader.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.ResourceManager.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.Writer.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Extensions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Handles.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.InteropServices.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Numerics.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Formatters.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Json.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Xml.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Claims.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Algorithms.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Csp.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Encoding.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Primitives.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Principal.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.SecureString.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.Encoding.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.Encoding.Extensions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.RegularExpressions.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Overlapped.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Tasks.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Tasks.Parallel.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Thread.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.ThreadPool.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Timer.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ValueTuple.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.ReaderWriter.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XDocument.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XmlDocument.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XmlSerializer.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XPath.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XPath.XDocument.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/M2Mqtt.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.csprojResolveAssemblyReference.cache
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.csproj.CoreCompileInputs.cache
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.exe.config
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.exe
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.pdb
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Newtonsoft.Json.dll
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Newtonsoft.Json.xml
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.exe.config
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.exe
+C:/Users/tobias.schmocker/Documents/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.pdb
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.exe.config
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.exe
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/NeplanMqttService.pdb
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Microsoft.Win32.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/netstandard.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.AppContext.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.Concurrent.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.NonGeneric.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Collections.Specialized.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.EventBasedAsync.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ComponentModel.TypeConverter.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Console.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Data.Common.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Contracts.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Debug.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.FileVersionInfo.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Process.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.StackTrace.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Tools.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.TraceSource.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Diagnostics.Tracing.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Drawing.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Dynamic.Runtime.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.Calendars.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Globalization.Extensions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Compression.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Compression.ZipFile.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.DriveInfo.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.FileSystem.Watcher.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.IsolatedStorage.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.MemoryMappedFiles.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.Pipes.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.IO.UnmanagedMemoryStream.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Expressions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Parallel.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Linq.Queryable.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Http.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.NameResolution.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.NetworkInformation.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Ping.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Requests.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Security.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.Sockets.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebHeaderCollection.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebSockets.Client.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Net.WebSockets.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ObjectModel.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.Extensions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Reflection.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.Reader.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.ResourceManager.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Resources.Writer.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Extensions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Handles.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.InteropServices.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Numerics.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Formatters.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Json.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Runtime.Serialization.Xml.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Claims.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Algorithms.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Csp.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Encoding.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.Primitives.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Cryptography.X509Certificates.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.Principal.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Security.SecureString.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.Encoding.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.Encoding.Extensions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Text.RegularExpressions.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Overlapped.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Tasks.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Tasks.Parallel.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Thread.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.ThreadPool.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Threading.Timer.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.ValueTuple.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XDocument.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XmlDocument.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XmlSerializer.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XPath.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/System.Xml.XPath.XDocument.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/M2Mqtt.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Newtonsoft.Json.dll
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/bin/Debug/Newtonsoft.Json.xml
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.csprojResolveAssemblyReference.cache
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.csproj.NeplanMqttService.exe.config
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.csproj.CoreCompileInputs.cache
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.exe
+/Users/tobias.schmocker/Google Drive/Development/GitHub/NeplanMatlab/ConsoleApp1/obj/Debug/NeplanMqttService.pdb
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.exe.config
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.exe
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\NeplanMqttService.pdb
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Microsoft.Win32.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\netstandard.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.AppContext.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.Concurrent.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.NonGeneric.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Collections.Specialized.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ComponentModel.TypeConverter.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Console.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Data.Common.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Contracts.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Debug.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Process.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.StackTrace.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Tools.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.TraceSource.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Diagnostics.Tracing.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Drawing.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Dynamic.Runtime.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.Calendars.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Globalization.Extensions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Compression.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Compression.ZipFile.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.FileSystem.Watcher.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.IsolatedStorage.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.MemoryMappedFiles.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.Pipes.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Expressions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Parallel.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Linq.Queryable.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Http.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.NameResolution.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.NetworkInformation.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Ping.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Requests.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Security.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.Sockets.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebHeaderCollection.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebSockets.Client.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Net.WebSockets.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ObjectModel.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.Extensions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Reflection.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.Reader.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.ResourceManager.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Resources.Writer.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Extensions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Handles.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.InteropServices.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Numerics.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Formatters.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Json.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Runtime.Serialization.Xml.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Claims.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Csp.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Encoding.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.Principal.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Security.SecureString.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.Encoding.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.Encoding.Extensions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Text.RegularExpressions.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Overlapped.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Tasks.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Tasks.Parallel.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Thread.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.ThreadPool.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Threading.Timer.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.ValueTuple.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.ReaderWriter.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XDocument.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XmlDocument.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XmlSerializer.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XPath.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\System.Xml.XPath.XDocument.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\M2Mqtt.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.csprojResolveAssemblyReference.cache
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.exe.config
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.csproj.CoreCompileInputs.cache
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.exe
+\\Mac\Google Drive\Development\GitHub\NeplanMatlab\ConsoleApp1\obj\Debug\NeplanMqttService.pdb

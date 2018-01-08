@@ -21,27 +21,25 @@ namespace NeplanMqttService
 
         static void Main(string[] args)
         {
-            Console.WriteLine("%%%%% Start %%%%%");
+            Console.WriteLine("%%%%% Start: Application %%%%%\n");
 
             client = new Mqtt_Client();
-            Console.WriteLine("- MQTT connectioon details:");
-            Console.WriteLine("broker: " + Mqtt_Client.url + "(preset in C#)");
-            Console.WriteLine("topic:  " + Mqtt_Client.topic + "(preset in C#)");
-            Console.WriteLine(" ");
+            Console.WriteLine("MQTT coneection details:");
+            Console.WriteLine("    broker:   " + Mqtt_Client.url + "(preset in C#)");
+            Console.WriteLine("    topic:    " + Mqtt_Client.topic + "(preset in C#)\n");
 
-            Console.WriteLine("- Neplan Server:");
-            Console.WriteLine("Server:   https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc (preset in C#)");
-            Console.WriteLine("username: not set (pending via mqtt)");
-            Console.WriteLine("password: not set (pending via mqtt)");
-            Console.WriteLine("project:  not set (pending via mqtt)");
-            Console.WriteLine(" ");
+            Console.WriteLine("Neplan Server details :");
+            Console.WriteLine("    Server:   https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc (preset in C#)");
+            Console.WriteLine("    username: not set (pending via mqtt)");
+            Console.WriteLine("    password: not set (pending via mqtt)");
+            Console.WriteLine("    project:  not set (pending via mqtt)\n");
+            Console.WriteLine("%%%%% Finished start procedure %%%%%\n");
 
         }
 
         public static void HandleCommand (string id, string fnc, Dictionary<string, string> pars)
         {
-            Console.WriteLine("%%%%% new command received %%%%%");
-            Console.WriteLine("- function: " + fnc);
+            Console.WriteLine("%%%%% START: " + fnc + " %%%%%");
 
             Dictionary<string, string> output = new Dictionary<string, string>();
             output["id"] = id;
