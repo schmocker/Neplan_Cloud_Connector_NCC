@@ -3,7 +3,7 @@ fnc = 'openWebservice';
 input.username = 'christoph.hunziker@fhnw.ch';
 input.password = 'nep360FH2017';
 input.project = 'NeplanMatlab2';
-output = client.do(fnc,input);
+client.do(fnc,input)
 input = struct;
 
 
@@ -15,7 +15,7 @@ input.calcNameID = "Default";
 input.analysisMethode = "";
 input.conditions = "";
 input.analysisLoadOptionXML = "";
-output = client.do(fnc,input);
+client.send(fnc,input)
 input = struct;
 
 %%
@@ -23,11 +23,11 @@ input = struct;
 fnc = 'GetListResultSummary';
 input.analysisType = "LoadFlow";
 input.networkTypeGroup = 0;
-input.networkTypeGroupID = " ";
-output = client.do(fnc,input);
+input.networkTypeGroupID = "";
+send(fnc,input)
 input = struct;
 %a = xmlreadstring(result);
 %%
 
 fnc = 'closeWebservice';
-output = client.do(fnc,input);
+send(fnc,input)

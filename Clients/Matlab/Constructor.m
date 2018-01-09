@@ -1,3 +1,7 @@
-clc
+
+try
+    delete(client)
+end
 clear all
-client = MQTT_Client();
+clc
+client = Neplan_MQTT_Client('tcp://www.tobiasschmocker.ch','Neplan');

@@ -9,35 +9,50 @@ namespace NeplanMqttService
 {
     class Command
     {
-        Webservice webservice;
-        ExternalProject project;
-        string analysisRefenceID = Guid.NewGuid().ToString();
-        string analysisModule = "";
-        string calcNameID = "";
-        string analysisMethode = "";
-        string conditions = "";
-        string analysisLoadOptionXML = "";
-        string analysisType = "";
-        DateTime simulationDateTime = new DateTime(); //  string to date - pending
-        int networkTypeGroup = 1; // Convert.ToInt32(pars["networkTypeGroup"]); //  string to int - done
-        string networkTypeGroupID = "";
+        public Dictionary<string, object> p = new Dictionary<string, object>();
 
-        public string result;
+        public object result;
         public string error;
 
-        public Command(Webservice webservice, string fnc, Dictionary<string, object> pars)
+        public Command(Webservice webservice, string fnc, Dictionary<string, object> par)
         {
-            this.webservice = webservice;
-            this.project = webservice.ext;
+            p = par;
+            // 
+            //p.Add("webservice", webservice);
+            p.Add("project", webservice.ext);
+            p.Add("analysisRefenceID", Guid.NewGuid().ToString());
+            //p.Add("analysisModule", null);
+            //p.Add("calcNameID", null);
+            //p.Add("analysisMethode", null);
+            //p.Add("conditions", null);
+            //p.Add("analysisLoadOptionXML", null);
+            //p.Add("analysisType", null);
+            p.Add("simulationDateTime", new DateTime());
+            //p.Add("networkTypeGroup", 0);
+            //p.Add("networkTypeGroupID", "");
 
+            
+
+            // Funktion ausführen
             switch (fnc)
             {
                 case "AnalyseVariant":
-                    AnalysisReturnInfo output_AnalyseVariant = webservice.nepService.AnalyseVariant(project, analysisRefenceID, analysisModule, calcNameID, analysisMethode, conditions, analysisLoadOptionXML);
+                    result = webservice.nepService.AnalyseVariant(
+                        (ExternalProject)p["project"],
+                        (string)p["analysisRefenceID"],
+                        (string)p["analysisModule"],
+                        (string)p["calcNameID"],
+                        (string)p["analysisMethode"],
+                        (string)p["conditions"],
+                        (string)p["analysisLoadOptionXML"]);
                     break;
                 case "GetListResultSummary":
-                    string[] output_GetListResultSummary = webservice.nepService.GetListResultSummary(project,analysisType,simulationDateTime,networkTypeGroup,networkTypeGroupID);
-                    result = output_GetListResultSummary[0];
+                    result = webservice.nepService.GetListResultSummary(
+                        (ExternalProject)p["project"],
+                        (string)p["analysisType"],
+                        (DateTime)p["simulationDateTime"],
+                        Convert.ToInt32(p["networkTypeGroup"]),
+                        (string)p["networkTypeGroupID"]);
                     break;
                 default:
                     result = "invalid function name";

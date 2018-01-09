@@ -40,10 +40,9 @@ namespace NeplanMqttService
             Dictionary<string, object> message = JsonConvert.DeserializeObject<Dictionary<string, object>>(message_json);
 
             string fnc = message["fnc"].ToString();
-            string id = message["id"].ToString();
             Dictionary<string, object> pars = JsonConvert.DeserializeObject<Dictionary<string, object>>(message["input"].ToString());
 
-            Program.HandleCommand(id, fnc, pars);
+            Program.HandleCommand(fnc, pars);
         }
 
         public static void Publish(Dictionary<string, object> output)

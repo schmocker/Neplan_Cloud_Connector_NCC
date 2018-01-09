@@ -37,13 +37,12 @@ namespace NeplanMqttService
 
         }
 
-        public static void HandleCommand (string id, string fnc, Dictionary<string, object> pars)
+        public static void HandleCommand (string fnc, Dictionary<string, object> pars)
         {
             Console.WriteLine("%%%%% START: " + fnc + " %%%%%");
 
             Dictionary<string, object> output = new Dictionary<string, object>();
-            output["id"] = id;
-            output["status"] = "received";
+            output["state"] = "received";
             Mqtt_Client.Publish(output);
 
             Console.WriteLine("- start processing");
@@ -68,7 +67,7 @@ namespace NeplanMqttService
 
 
 
-            output["status"] = "done";
+            output["state"] = "done";
             Mqtt_Client.Publish(output);
             Console.WriteLine("- results sent");
             Console.WriteLine("%%%%% Finished %%%%%");
