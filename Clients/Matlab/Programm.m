@@ -25,8 +25,9 @@ input.analysisType = "LoadFlow";
 input.networkTypeGroup = 0;
 input.networkTypeGroupID = " ";
 output = client.do(fnc,input);
+output = jsondecode(output.Outputs.result)
 input = struct;
-%a = xmlreadstring(result);
+
 %%
 
 fnc = 'closeWebservice';

@@ -1,9 +1,11 @@
 ﻿using NeplanMqttService.NeplanService;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace NeplanMqttService
 {
@@ -47,12 +49,17 @@ namespace NeplanMqttService
                         (string)p["analysisLoadOptionXML"]);
                     break;
                 case "GetListResultSummary":
-                    result = webservice.nepService.GetListResultSummary(
+                    string[] r = webservice.nepService.GetListResultSummary(
                         (ExternalProject)p["project"],
                         (string)p["analysisType"],
                         (DateTime)p["simulationDateTime"],
                         Convert.ToInt32(p["networkTypeGroup"]),
                         (string)p["networkTypeGroupID"]);
+
+                    XmlDocument doc = new XmlDocument();
+                    doc.LoadXml(r[0]);
+                    result = JsonConvert.SerializeXmlNode(doc);
+
                     break;
                 default:
                     result = "invalid function name";

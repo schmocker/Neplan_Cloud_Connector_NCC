@@ -1,6 +1,0 @@
-t = timer('TimerFcn', 'stat=false; disp(''Timer!'')',...
-    'StartDelay',1);t = timer('TimerFcn', 'stat=false; disp(''Timer!'')',...
-    'StartDelay',1);
-start(t)
-%%
-stop(t)
