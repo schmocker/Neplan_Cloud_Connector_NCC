@@ -14,8 +14,7 @@ namespace NeplanMqttService
     {
         public static string url = "www.tobiasschmocker.ch";
         public static string topic = "Neplan";
-
-
+        
         public static MqttClient client;
 
         public Mqtt_Client()

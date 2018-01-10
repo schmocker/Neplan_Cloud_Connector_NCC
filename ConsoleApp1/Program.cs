@@ -11,25 +11,34 @@ using System.Threading.Tasks;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using System.Threading;
+using System.Xml.Linq;
+using System.Reflection;
 
 namespace NeplanMqttService
 {
     class Program
     {
         public static Mqtt_Client client;
-        public static Webservice webservice;
+        public static NeplanServiceClient neplanServiceClient = new NeplanServiceClient();
+        public static ExternalProject project;
+        private string[] otherValidMethods = { "StartNeplanServiceClient", "StopNeplanServiceClient" };
 
         static void Main(string[] args)
         {
+
+
+            //throw new Exception("Test Exception");
+
+            // Start
             Console.WriteLine("%%%%% Start: Application %%%%%\n");
 
             client = new Mqtt_Client();
             Console.WriteLine("MQTT coneection details:");
-            Console.WriteLine("    broker:   " + Mqtt_Client.url + "(preset in C#)");
-            Console.WriteLine("    topic:    " + Mqtt_Client.topic + "(preset in C#)\n");
+            Console.WriteLine("    broker:   " + Mqtt_Client.url + "(set in C#)");
+            Console.WriteLine("    topic:    " + Mqtt_Client.topic + "(set in C#)\n");
 
             Console.WriteLine("Neplan Server details :");
-            Console.WriteLine("    Server:   https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc (preset in C#)");
+            Console.WriteLine("    Server:   https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc (set in C#)");
             Console.WriteLine("    username: not set (pending via mqtt)");
             Console.WriteLine("    password: not set (pending via mqtt)");
             Console.WriteLine("    project:  not set (pending via mqtt)\n");
@@ -44,25 +53,12 @@ namespace NeplanMqttService
             Dictionary<string, object> output = new Dictionary<string, object>();
             output["state"] = "received";
             Mqtt_Client.Publish(output);
+            
 
-            Console.WriteLine("- start processing");
-            switch (fnc)
-            {
-                case "openWebservice":
-                    webservice = new Webservice(pars["username"].ToString(), pars["password"].ToString(), pars["project"].ToString());
-                    output["webservice"] = "connected";
-                    break;
-                case "closeWebservice":
-                    webservice.CloseWebservice();
-                    output["webservice"] = "disconnected";
-                    break;
-                // functions from the neplan webservice
-                default:
-                    Command command = new Command(webservice, fnc, pars);
-                    output["result"] = command.result;
-                    output["error"] = command.error;
-                    break;
-            }
+            Console.WriteLine("- start processing\n");
+
+            Command command = new Command(neplanServiceClient, project, fnc, pars);
+            
             Console.WriteLine("- end processing");
 
 

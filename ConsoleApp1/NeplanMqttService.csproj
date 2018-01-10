@@ -88,7 +88,6 @@
     <Compile Include="Mqtt_Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Webservice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

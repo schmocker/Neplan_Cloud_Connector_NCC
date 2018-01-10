@@ -25,9 +25,9 @@ classdef Command < handle
         end
         function decode(obj,msg_json)
             outputs = jsondecode(msg_json{1});
-            if strcmp(outputs.state,'received')
+            if outputs.Received && not(outputs.Done)
                 obj.State = 'pending';
-            elseif strcmp(outputs.state,'done')
+            elseif outputs.Done
                 obj.State = 'completing';
                 obj.Outputs = outputs;
             else
