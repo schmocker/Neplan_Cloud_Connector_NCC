@@ -10,6 +10,7 @@ namespace Neplan_Cloud_Connector_NCC
     {
         static void Main(string[] args)
         {
+            Controller controller = new Controller();
         }
     }
 }
