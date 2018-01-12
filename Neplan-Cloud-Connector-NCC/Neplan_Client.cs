@@ -17,69 +17,32 @@ namespace Neplan_Cloud_Connector_NCC
         private Controller controller;
 
         private NeplanServiceClient neplanServiceClient = new NeplanServiceClient();
-        private ExternalProject project;
+        public ExternalProject project;
 
         public Neplan_Client()
         {
-
         }
         public void setController(Controller controller)
         {
             this.controller = controller;
         }
 
-
-        public Command treatCommand(Command command)
+        public string[] getMethodNames()
         {
-            command.Inputs["project"] = project;
-            command.Inputs["projectName"] = project;
-
-            // short name variables
-            Dictionary<string, object> p = command.Inputs;
-            object result;
-
-            // get Method
-            MethodInfo method = neplanServiceClient.GetType().GetMethod(command.MethodName);
-            ParameterInfo[] parameters = method.GetParameters();
-            string[] parName = new string[parameters.Length];
-            string[] parType = new string[parameters.Length];
-            object[] parInput = new object[parameters.Length];
-            object[] par = new object[parameters.Length];
-
-            for (int i = 0; i < parameters.Length; i++)
+            MethodInfo[] methods = neplanServiceClient.GetType().GetMethods();
+            string[] methodNames = new string[methods.Length];
+            for (int i = 0; i < methods.Length; i++)
             {
-                parName[i] = parameters[i].Name;
-                parType[i] = parameters[i].ParameterType.ToString();
-                bool hasInput = command.Inputs.ContainsKey(parName[i]);
-                parInput[i] = hasInput ? command.Inputs[parName[i]] : null;
-
-                // Convert parameter
-                switch (parType[i])
-                {
-                    case "Neplan_Cloud_Connector_NCC.NeplanService.ExternalProject":
-                        break;
-                    case "System.String":
-                        break;
-                    case "System.Int32":
-                        break;
-                    case "System.DateTime":
-                        break;
-                    default:
-                        break;
-                }
-
-                // pass parameter to parameter array
-                par[i] = command.Inputs[parName[i]];
+                methodNames[i] = methods[i].Name;
             }
-
-            result = method.Invoke(neplanServiceClient, par);
-
-            command.Outputs = result;
-
-            return command;
+            return methodNames;
+        }
+        public object GetObjectHandler()
+        {
+            return neplanServiceClient;
         }
 
-
+        
         // 
         public bool hasMethod(String methodName)
         {
@@ -110,14 +73,8 @@ namespace Neplan_Cloud_Connector_NCC
             }
 
 
-            // Show all methods
-            /*
-            MethodInfo[] methods = neplanServiceClient.GetType().GetMethods();
-            foreach (var item in methods)
-            {
-                Console.WriteLine(item + "\n");
-            }
-            */
+            
+            
         }
 
         public void StopNeplanServiceClient()

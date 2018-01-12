@@ -46,12 +46,12 @@ namespace Neplan_Cloud_Connector_NCC
             command.Received = true;
             Publish(command);
             // process comand
-            controller.treatCommand(command);
+            controller.TreatCommand(command);
         }
 
         public void Publish(Command commmand)
         {
-            string msg_json = JsonConvert.SerializeObject(commmand, Formatting.Indented);
+            string msg_json = JsonConvert.SerializeObject(commmand.Results(), Formatting.Indented);
             byte[] msg_bytes = Encoding.UTF8.GetBytes(msg_json);
             client.Publish(topic + "/fromService", msg_bytes, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         }
