@@ -1,5 +1,6 @@
 ﻿using Neplan_Cloud_Connector_NCC.NeplanService;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,47 +31,48 @@ namespace Neplan_Cloud_Connector_NCC
 
         public Command treatCommand(Command command)
         {
-            // Standard values
-            command.Inputs.Add("analysisRefenceID", Guid.NewGuid().ToString());
-            command.Inputs.Add("simulationDateTime", new DateTime());
+            command.Inputs["project"] = project;
+            command.Inputs["projectName"] = project;
 
             // short name variables
             Dictionary<string, object> p = command.Inputs;
             object result;
 
-            // Funktion ausführen
-            switch (command.MethodName)
+            // get Method
+            MethodInfo method = neplanServiceClient.GetType().GetMethod(command.MethodName);
+            ParameterInfo[] parameters = method.GetParameters();
+            string[] parName = new string[parameters.Length];
+            string[] parType = new string[parameters.Length];
+            object[] parInput = new object[parameters.Length];
+            object[] par = new object[parameters.Length];
+
+            for (int i = 0; i < parameters.Length; i++)
             {
-                case "AnalyseVariant":
-                    result = neplanServiceClient.AnalyseVariant(project,
-                        (string)p["analysisRefenceID"],
-                        (string)p["analysisModule"],
-                        (string)p["calcNameID"],
-                        (string)p["analysisMethode"],
-                        (string)p["conditions"],
-                        (string)p["analysisLoadOptionXML"]);
-                    break;
-                case "GetListResultSummary":
-                    string[] r = neplanServiceClient.GetListResultSummary(project,
-                        (string)p["analysisType"],
-                        (DateTime)p["simulationDateTime"],
-                        Convert.ToInt32(p["networkTypeGroup"]),
-                        (string)p["networkTypeGroupID"]);
-                    result = xml2dir(r[0]);
-                    break;
-                case "GetResultElementByName":
-                    string d = neplanServiceClient.GetResultElementByName(project,
-                        (string)p["elementName"],
-                        (string)p["elementTypeName"],
-                        Convert.ToInt32(p["portNr"]),
-                        (string)p["analysisType"],
-                        (DateTime)p["simulationDateTime"]);
-                    result = xml2dir(d);
-                    break;
-                default:
-                    result = "invalid function name";
-                    break;
+                parName[i] = parameters[i].Name;
+                parType[i] = parameters[i].ParameterType.ToString();
+                bool hasInput = command.Inputs.ContainsKey(parName[i]);
+                parInput[i] = hasInput ? command.Inputs[parName[i]] : null;
+
+                // Convert parameter
+                switch (parType[i])
+                {
+                    case "Neplan_Cloud_Connector_NCC.NeplanService.ExternalProject":
+                        break;
+                    case "System.String":
+                        break;
+                    case "System.Int32":
+                        break;
+                    case "System.DateTime":
+                        break;
+                    default:
+                        break;
+                }
+
+                // pass parameter to parameter array
+                par[i] = command.Inputs[parName[i]];
             }
+
+            result = method.Invoke(neplanServiceClient, par);
 
             command.Outputs = result;
 
@@ -89,6 +91,7 @@ namespace Neplan_Cloud_Connector_NCC
         // methods to connect or disconnect
         public void StartNeplanServiceClient(string username, string password, string projectName)
         {
+            neplanServiceClient = new NeplanServiceClient();
             neplanServiceClient.ClientCredentials.UserName.UserName = username;              //give the username       
             neplanServiceClient.ClientCredentials.UserName.Password = getMd5Hash(password);  //give the password
             try
@@ -105,6 +108,16 @@ namespace Neplan_Cloud_Connector_NCC
             {
                 Console.WriteLine("Cannot open service");
             }
+
+
+            // Show all methods
+            /*
+            MethodInfo[] methods = neplanServiceClient.GetType().GetMethods();
+            foreach (var item in methods)
+            {
+                Console.WriteLine(item + "\n");
+            }
+            */
         }
 
         public void StopNeplanServiceClient()

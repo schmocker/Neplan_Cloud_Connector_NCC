@@ -38,10 +38,9 @@ namespace Neplan_Cloud_Connector_NCC
             string message_json = System.Text.Encoding.UTF8.GetString(e.Message);
             Command command = new Command();
 
-            Dictionary<string, object> message = JsonConvert.DeserializeObject<Dictionary<string, object>>(message_json);
+            command.DecodeJson(message_json);
 
-            command.MethodName = message["fnc"].ToString();
-            command.Inputs = JsonConvert.DeserializeObject<Dictionary<string, object>>(message["input"].ToString());
+            
 
             // sending confirmation
             command.Received = true;

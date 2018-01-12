@@ -84,7 +84,7 @@ namespace Neplan_Cloud_Connector_NCC
         public void StopNeplanClient()
         {
             neplanClient.StopNeplanServiceClient();
-            Environment.Exit(0);
+            // Environment.Exit(0);
         }
 
         // console outputs
