@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neplan-Cloud-Connector-NCC", "Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC.csproj", "{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44895412-EBF2-4691-BEE1-5C9B227C2ED0}
+	EndGlobalSection
+EndGlobal
