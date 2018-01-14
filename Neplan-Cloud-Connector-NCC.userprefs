@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{5CF463DC-B710-49D5-A95F-77FF6B5B43D0}|Default">
+  <MonoDevelop.Ide.ItemProperties.Neplan-Cloud-Connector-NCC PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Neplan-Cloud-Connector-NCC/Connected Services/NeplanService/Reference.cs">
+    <Files>
+      <File FileName="Neplan-Cloud-Connector-NCC/Controller.cs" Line="1" Column="1" />
+      <File FileName="Neplan-Cloud-Connector-NCC/Connected Services/NeplanService/Reference.cs" Line="5351" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
