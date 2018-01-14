@@ -100,7 +100,12 @@
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\bin\Release\M2Mqtt.dll
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\bin\Release\Newtonsoft.Json.dll
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\bin\Release\Newtonsoft.Json.xml
+\\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.csprojResolveAssemblyReference.cache
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.exe.config
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.csproj.CoreCompileInputs.cache
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.exe
 \\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.pdb
+\\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\bin\Release\Neplan-Cloud-Connector-NCC.exe.manifest
+\\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\bin\Release\Neplan-Cloud-Connector-NCC.application
+\\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.exe.manifest
+\\Mac\Home\GitHub\Neplan-Cloud-Connector-NCC\Neplan-Cloud-Connector-NCC\obj\Release\Neplan-Cloud-Connector-NCC.application
