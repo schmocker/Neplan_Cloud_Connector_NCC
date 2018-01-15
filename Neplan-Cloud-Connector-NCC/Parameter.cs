@@ -15,12 +15,21 @@ namespace Neplan_Cloud_Connector_NCC
         public object Value = null;
         public bool Reuired = false;
         public bool SetByInput = false;
-        public Parameter()
-        {
 
-        }
         public void SetValue(Object Input)
         {
+            switch (Name)
+            {
+                case "analysisRefenceID":
+                    Input = Guid.NewGuid().ToString();
+                    break;
+                case "project":
+                    break;
+                case "projectName":
+                    break;
+                default:
+                    break;
+            }
             switch (Type)
             {
                 case "Neplan_Cloud_Connector_NCC.NeplanService.ExternalProject":
@@ -41,6 +50,36 @@ namespace Neplan_Cloud_Connector_NCC
                     Console.WriteLine("Could not convert " + Name + " to datatype " + Type + ". There is no method for this datatype.");
                     break;
             }
+        }
+    }
+    class ParameterDictionary : Dictionary<string, Parameter>
+    {
+        public void AddRequired(ParameterInfo parInfo)
+        {
+            Parameter par = new Parameter();
+            par.Name = parInfo.Name;
+            par.Type = parInfo.ParameterType.ToString();
+            par.Reuired = true;
+            this.Add(parInfo.Name, par);
+        }
+        public void AddUnused(string name)
+        {
+            Parameter par = new Parameter();
+            par.Name = name;
+            par.Reuired = false;
+            this.Add(name,par);
+        }
+        public object[] GetRequiredValues()
+        {
+            List<object> d = new List<object>();
+            foreach (Parameter par in this.Values)
+            {
+                if (par.Reuired)
+                {
+                    d.Add(par.Value);
+                }
+            }
+            return d.ToArray();
         }
     }
 }

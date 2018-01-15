@@ -314,14 +314,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Neplan-Cloud-Connector-NCC.exe" size="124448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Neplan-Cloud-Connector-NCC.exe" size="125472">
       <assemblyIdentity name="Neplan-Cloud-Connector-NCC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OuxmcSP34hJKQXnb60E0KgB22LF9Nxi1rz20yrDp+bA=</dsig:DigestValue>
+        <dsig:DigestValue>/7yI5xvKwMnPnWuwoYDrF1gB/gTBn8XVKmcudIWb038=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

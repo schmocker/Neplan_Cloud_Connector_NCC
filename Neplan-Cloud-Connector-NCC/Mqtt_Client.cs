@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,21 +33,22 @@ namespace Neplan_Cloud_Connector_NCC
             this.controller = controller;
         }
 
-        public void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        public void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs msg)
         {
-            // handle message received
-            string message_json = System.Text.Encoding.UTF8.GetString(e.Message);
-            Command command = new Command();
-
-            command.DecodeJson(message_json);
-
-            
-
-            // sending confirmation
-            command.Received = true;
-            Publish(command);
-            // process comand
-            controller.TreatCommand(command);
+            string methodName = null;
+            Dictionary<string, object> input = new Dictionary<string, object>();
+            try
+            {
+                string json_string = System.Text.Encoding.UTF8.GetString(msg.Message);
+                JObject json = JsonConvert.DeserializeObject<JObject>(json_string);
+                methodName = (string)json["FunctionName"];
+                input = json["Input"].ToObject<Dictionary<string, object>>();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            controller.TreatCommand(methodName, input);
         }
 
         public void Publish(Command commmand)

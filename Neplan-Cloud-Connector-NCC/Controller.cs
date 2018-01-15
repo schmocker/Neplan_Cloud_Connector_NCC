@@ -17,7 +17,7 @@ namespace Neplan_Cloud_Connector_NCC
         private string neplanServiceUrl = "https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
 
         private string[] localMethods = { "StartNeplanClient", "StopNeplanClient" };
-        private string[] neplanMethods;
+        CommandDictionary allCommands = new CommandDictionary();
 
         public Controller()
         {
@@ -27,59 +27,98 @@ namespace Neplan_Cloud_Connector_NCC
             neplanClient = new Neplan_Client();
             neplanClient.setController(this);
 
-            neplanMethods = neplanClient.getMethodNames();
-
             ConsoleOut.ShowStart(mqttUrl, mqttTopic, neplanServiceUrl);
+            GatherAllMethods();
         }
 
-        public void TreatCommand(Command command)
+        public void GatherAllMethods()
         {
-            Console.WriteLine("%%%%% Start: " + command.MethodName + " %%%%%\n\n");
+            // get all local mathods
+            foreach (string methodName in localMethods)
+                allCommands.AddNew(methodName, this);
+            // get all methods from Neplan
+            foreach (var methodName in neplanClient.getMethodNames())
+                allCommands.AddNew(methodName, neplanClient.GetObjectHandler());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="methodName"></param>
+        /// <param name="input"></param>
+        public void TreatCommand(string methodName, Dictionary<string,object> input)
+        {
+            Console.WriteLine("%%%%% Start: " + methodName + " %%%%%\n\n");
 
             // set object handler
             // the object handler is the object, that handlse the method bzw. the command.
-            if (localMethods.Contains(command.MethodName))
-                command.ObjectHandler = this;
-            else if (neplanMethods.Contains(command.MethodName))
+            Command cmd;
+            if (allCommands.ContainsKey(methodName))
             {
-                command.ObjectHandler = neplanClient.GetObjectHandler();
-                // spezielle Parameter setzen
-                command.Ins.Add("project", neplanClient.project);
-                command.Ins.Add("projectName", neplanClient.project);
-                command.Ins.Add("analysisRefenceID", Guid.NewGuid().ToString());
+                cmd = allCommands[methodName].Clone();
             }
             else
             {
-                command.Error = true;
-                Console.WriteLine("!!!!! no valid function found !!!!!\n");
+                cmd = new Command(methodName);
+                cmd.Error = true;
+                cmd.ErrorMsg = "Method could not be found";
             }
-            Console.WriteLine("Objekt gefunden");
 
 
+            if (cmd.ObjectHandler == neplanClient.GetObjectHandler())
+            {
+                input["project"] = neplanClient.project;
+                input["projectName"] = neplanClient.project;
+            }
+
+            if (!cmd.Error)
+            {
+                // Anjust the recieved Inputs to the desired parameters
+                cmd.SetParameters(input);
+                ConsoleOut.ShowMethodInfo(cmd);
+            }
+
+
+            if (!cmd.Error)
+            {
+                // Invoke method
+                cmd.Invoke();
+            }
+
+
+            Console.WriteLine("Funktion ausgeführt");
             
 
 
-
-            // Methode verbinden
-            command.ReferMethod();
-            Console.WriteLine("Methode gefunden");
-            ConsoleOut.ShowMethodInfo(command.Method);
-
-            // Parameter anpassen
-            command.PrepareParameters();
-            Console.WriteLine("Parameter angepasst");
-
-            // Methode ausführen
-            command.Invoke();
-            Console.WriteLine("Funktion ausgeführt");
-
-
-
             // publish results
-            command.Done = true;
-            mqttClient.Publish(command);
-            Console.WriteLine("%%%%% END: " + command.MethodName + " %%%%%\n\n");
+            cmd.Done = true;
+            mqttClient.Publish(cmd);
+            Console.WriteLine("%%%%% END: " + cmd.MethodName + " %%%%%\n\n");
         }
+
+
+
+
+
+
+
+
+
 
         // local methods that can be used via mqtt
         public void StartNeplanClient(string username, string password, string project)
@@ -92,4 +131,7 @@ namespace Neplan_Cloud_Connector_NCC
             // Environment.Exit(0);
         }
     }
+
+    
+    
 }

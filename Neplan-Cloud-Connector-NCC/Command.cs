@@ -12,88 +12,95 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class Command
     {
-        public string MethodName;
+        public string MethodName, Classname;
 
-        public Object ObjectHandler = null;
-        public MethodInfo Method = null;
+        public object ObjectHandler;
+        public MethodInfo Method;
 
-        public Dictionary<string, object> Ins;
 
-        
-        public List<Parameter> Input = new List<Parameter>();
-        public List<object> InputValues = new List<object>();
+        public ParameterDictionary Input = new ParameterDictionary();
         public object Output;
 
         public bool Error = false;
         public bool Received = false;
         public bool Done = false;
+        public string ErrorMsg, ExceptionMsg;
 
-
-        public void DecodeJson(string jsonString)
+        // Constructor Cmethods
+        public Command(string methodName)
         {
-            Dictionary<string, object> message = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonString);
-            MethodName = message["fnc"].ToString();
-            string InputJson = message["input"].ToString();
-            Ins = JsonConvert.DeserializeObject<Dictionary<string, object>>(InputJson);
+            this.MethodName = methodName;
         }
-        public void LocatMethodObject(object[] possibleObjects)
+        public Command(string methodName, object objectHandler)
         {
-            foreach (var item in possibleObjects)
-            {
+            this.MethodName = methodName;
+            this.ObjectHandler = objectHandler;
+            Classname = objectHandler.GetType().ToString();
+            Method = objectHandler.GetType().GetMethod(methodName);
 
-            }
+            foreach (var par in Method.GetParameters())
+                Input.AddRequired(par);
         }
-
-        public void ReferMethod()
+        // Clone method to copy an instance
+        public Command Clone()
         {
-            Method = ObjectHandler.GetType().GetMethod(MethodName);
+            return (Command)this.MemberwiseClone();
         }
 
-        public void PrepareParameters()
+
+        // Run method
+        public void Run()
         {
             
 
-            ParameterInfo[] parameters = Method.GetParameters();
-            // Converting all required parameters
-            for (int i = 0; i < parameters.Length; i++)
-            {
-                Input.Add(new Parameter());
-                Input[i].Reuired = true;
-                Input[i].Name = parameters[i].Name;
-                Input[i].Type = parameters[i].ParameterType.ToString();
-                if (Ins.ContainsKey(Input[i].Name))
-                {
-                    Input[i].SetValue(Ins[Input[i].Name]);
-                    Ins.Remove(Input[i].Name);
-                    Input[i].SetByInput = true;
-                }
-                InputValues.Add(Input[i].Value);
-            }
-            // Handling all not required inputs
-            int ii = Input.Count();
-            foreach (var item in Ins)
-            {
-                Input.Add(new Parameter());
-                Input[ii].Reuired = true;
-                Input[ii].Name = item.Key;
-                Input[ii].Value = item.Value;
-                Input[ii].SetByInput = true;
-                ii++;
-            }
-            // Inputs.Add("analysisRefenceID", Guid.NewGuid().ToString());
         }
+
+        
+
+        public void SetParameters(Dictionary<string, object> input)
+        {
+            try
+            {
+                foreach (Parameter par in Input.Values)
+                {
+                    if (input.ContainsKey(par.Name))
+                    {
+                        par.SetValue(input[par.Name]);
+                        input.Remove(par.Name);
+                        par.SetByInput = true;
+                    }
+                }
+                foreach (var item in input)
+                {
+                    // unbenötigte parameter -> ergänzen
+                }
+                Console.WriteLine("Parameters set");
+            }
+            catch (Exception e)
+            {
+                Error = true;
+                ErrorMsg = ("Parameters not set");
+                ExceptionMsg = e.ToString();
+            }
+        }
+
+
         public void Invoke()
         {
             try
             {
-                Output = Method.Invoke(ObjectHandler, InputValues.ToArray());
+                Output = Method.Invoke(ObjectHandler, Input.GetRequiredValues());
+                Console.WriteLine("Method invoked");
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Error = true;
+                ErrorMsg = ("Method not invoked");
+                ExceptionMsg = e.ToString();
             }
-
-            
+        }
+        public void ConvertOutput()
+        {
             if (Output != null)
             {
                 Console.WriteLine(Output.GetType().ToString());
@@ -107,8 +114,6 @@ namespace Neplan_Cloud_Connector_NCC
                         break;
                 }
             }
-            
-
         }
 
         public Dictionary<string, object> Results()
@@ -129,5 +134,14 @@ namespace Neplan_Cloud_Connector_NCC
             Dictionary<string, object> obj = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
             return obj;
         }
+    }
+    class CommandDictionary : Dictionary<string, Command>
+    {
+        public void AddNew(string methodName, object objectHandler)
+        {
+            Command cmd = new Command(methodName, objectHandler);
+            this.Add(methodName, cmd);
+        }
+
     }
 }
