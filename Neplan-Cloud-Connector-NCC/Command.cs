@@ -12,7 +12,7 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class Command
     {
-        public string MethodName, Classname;
+        public string FunctionName, ClassName;
 
         public object ObjectHandler;
         public MethodInfo Method;
@@ -27,16 +27,16 @@ namespace Neplan_Cloud_Connector_NCC
         public string ErrorMsg, ExceptionMsg;
 
         // Constructor Cmethods
-        public Command(string methodName)
+        public Command(string fcnName)
         {
-            this.MethodName = methodName;
+            this.FunctionName = fcnName;
         }
-        public Command(string methodName, object objectHandler)
+        public Command(string fcnName, object objectHandler)
         {
-            this.MethodName = methodName;
+            this.FunctionName = fcnName;
             this.ObjectHandler = objectHandler;
-            Classname = objectHandler.GetType().ToString();
-            Method = objectHandler.GetType().GetMethod(methodName);
+            ClassName = objectHandler.GetType().ToString();
+            Method = objectHandler.GetType().GetMethod(fcnName);
 
             foreach (var par in Method.GetParameters())
                 Input.AddRequired(par);
@@ -55,7 +55,17 @@ namespace Neplan_Cloud_Connector_NCC
 
         }
 
-        
+        public void setError(string msg, Exception e = null)
+        {
+            Error = true;
+            ErrorMsg = msg;
+            Console.WriteLine("--> Error: "+ ErrorMsg + "\n");
+            if (e != null)
+            {
+                ExceptionMsg = e.ToString();
+                Console.WriteLine("    System message: " + ExceptionMsg + "\n");
+            }
+        }
 
         public void SetParameters(Dictionary<string, object> input)
         {
@@ -69,18 +79,19 @@ namespace Neplan_Cloud_Connector_NCC
                         input.Remove(par.Name);
                         par.SetByInput = true;
                     }
+                    else
+                    {
+                        setError("Parameter '"+par.Name+"' missing");
+                    }
                 }
                 foreach (var item in input)
                 {
                     // unbenötigte parameter -> ergänzen
                 }
-                Console.WriteLine("Parameters set");
             }
             catch (Exception e)
             {
-                Error = true;
-                ErrorMsg = ("Parameters not set");
-                ExceptionMsg = e.ToString();
+                setError("Parameters not set",e);
             }
         }
 
@@ -94,9 +105,7 @@ namespace Neplan_Cloud_Connector_NCC
             }
             catch (Exception e)
             {
-                Error = true;
-                ErrorMsg = ("Method not invoked");
-                ExceptionMsg = e.ToString();
+                setError("Method not invoked", e);
             }
         }
         public void ConvertOutput()
@@ -142,6 +151,5 @@ namespace Neplan_Cloud_Connector_NCC
             Command cmd = new Command(methodName, objectHandler);
             this.Add(methodName, cmd);
         }
-
     }
 }

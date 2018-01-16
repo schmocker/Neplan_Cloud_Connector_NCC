@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -43,17 +44,7 @@ namespace Neplan_Cloud_Connector_NCC
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
         /// <summary>
@@ -75,15 +66,16 @@ namespace Neplan_Cloud_Connector_NCC
             else
             {
                 cmd = new Command(methodName);
-                cmd.Error = true;
-                cmd.ErrorMsg = "Method could not be found";
+                cmd.setError("Method could not be found");
             }
 
 
-            if (cmd.ObjectHandler == neplanClient.GetObjectHandler())
+            if (cmd.ObjectHandler.GetType() == neplanClient.GetObjectHandler().GetType())
             {
+                cmd.ObjectHandler = neplanClient.GetObjectHandler();
                 input["project"] = neplanClient.project;
                 input["projectName"] = neplanClient.project;
+                input["analysisRefenceID"] = Guid.NewGuid().ToString();
             }
 
             if (!cmd.Error)
@@ -107,8 +99,22 @@ namespace Neplan_Cloud_Connector_NCC
 
             // publish results
             cmd.Done = true;
-            mqttClient.Publish(cmd);
-            Console.WriteLine("%%%%% END: " + cmd.MethodName + " %%%%%\n\n");
+
+
+            Command c = new Command(cmd.FunctionName);
+            c.Input = cmd.Input;
+            c.Output = cmd.Output;
+            c.Error = cmd.Error;
+            c.Received = cmd.Received;
+            c.Done = cmd.Done;
+            c.ErrorMsg = cmd.ErrorMsg;
+            c.ExceptionMsg = cmd.ExceptionMsg;
+            
+            string msg_json = JsonConvert.SerializeObject(c);
+
+
+            mqttClient.Publish(msg_json);
+            Console.WriteLine("%%%%% END: " + cmd.FunctionName + " %%%%%\n\n");
         }
 
 

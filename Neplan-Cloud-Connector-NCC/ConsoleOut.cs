@@ -27,33 +27,42 @@ namespace Neplan_Cloud_Connector_NCC
         public static void ShowMethodInfo(Command cmd)
         {
             Console.WriteLine("--> Funktion:");
-            Console.WriteLine(cmd.MethodName + "\n");
+            Console.WriteLine(cmd.FunctionName + "\n");
             Console.WriteLine("--> Benötigte Parameter:");
-            string format = "|{0,-20}|{1,-50}|{2,-10}|{3,-10}|{4,-30}|";
-            string fs = String.Format(format, "name", "type", "isRequired", "isSetByInput", "value");
-            Console.WriteLine(new String('-', fs.Length));
-            Console.WriteLine(fs);
-            Console.WriteLine(new String('-', fs.Length));
 
 
-
-            object[,] obj = new object[cmd.Input.Count, 4];
-            object[][] siz;
-            int i = 0;
+            // get values
+            List<string[]> stringArrays = new List<string[]>();
+            string[] titles = { "name", "type", "isRequired", "isSetByInput", "value" };
+            stringArrays.Add(titles);
             foreach (Parameter thisPar in cmd.Input.Values)
             {
-                obj[i, 0] = thisPar.Name;
-                obj[i, 1] = thisPar.Type;
-                obj[i, 2] = thisPar.Reuired;
-                obj[i, 3] = thisPar.SetByInput;
-                obj[i, 4] = thisPar.Value;
-                i++;
-                Console.WriteLine(String.Format(format, thisPar.Name, thisPar.Type, thisPar.Reuired, thisPar.SetByInput, thisPar.Value));
+                string[] str = { thisPar.Name, thisPar.Type, thisPar.Reuired.ToString(), thisPar.SetByInput.ToString(), (thisPar.Value ?? "-").ToString() };
+                stringArrays.Add(str);
             }
-            Console.WriteLine(new String('-', fs.Length));
+
+            // count sizes
+            List<int> sizes = new List<int>(new int[titles.Length]);
+            foreach (string[] stringArray in stringArrays)
+            {
+                for (int i = 0; i < stringArray.Length; i++)
+                {
+                    sizes[i] = Math.Max(sizes[i], stringArray[i].Length+1);
+                }
+            }
+
+            // print out
+            string format = "|{0,-" + sizes[0] + "}|{1,-" + sizes[1] + "}|{2,-" + sizes[2] + "}|{3,-" + sizes[3] + "}|{4,-" + sizes[4] + "}|";
+            for (int i = 0; i < stringArrays.Capacity; i++)
+            {
+                string stringLine = String.Format(format, stringArrays[i]);
+                if (i == 0)
+                    Console.WriteLine(new String('-', stringLine.Length));
+                Console.WriteLine(String.Format(format, stringArrays[i]));
+                if (i == 0 || i == stringArrays.Capacity - 1)
+                    Console.WriteLine(new String('-', stringLine.Length));
+            }
             Console.WriteLine("\n");
-
-
             
         }
     }

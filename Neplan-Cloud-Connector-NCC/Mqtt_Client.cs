@@ -35,6 +35,7 @@ namespace Neplan_Cloud_Connector_NCC
 
         public void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs msg)
         {
+            SendReceipt();
             string methodName = null;
             Dictionary<string, object> input = new Dictionary<string, object>();
             try
@@ -51,9 +52,18 @@ namespace Neplan_Cloud_Connector_NCC
             controller.TreatCommand(methodName, input);
         }
 
-        public void Publish(Command commmand)
+        public void SendReceipt()
         {
-            string msg_json = JsonConvert.SerializeObject(commmand.Results(), Formatting.Indented);
+            Dictionary<string, bool> receipt = new Dictionary<string, bool>();
+            receipt.Add("Received" , true);
+            receipt.Add("Done" , false);
+            JToken json = JToken.FromObject(receipt);
+            string msg_json = JsonConvert.SerializeObject(json);
+            Publish(msg_json);
+        }
+
+        public void Publish(string msg_json)
+        {
             byte[] msg_bytes = Encoding.UTF8.GetBytes(msg_json);
             client.Publish(topic + "/fromService", msg_bytes, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         }
