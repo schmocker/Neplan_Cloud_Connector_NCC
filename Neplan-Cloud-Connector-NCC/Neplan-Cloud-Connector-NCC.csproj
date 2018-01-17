@@ -114,8 +114,6 @@
     <Compile Include="ConsoleOut.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Mqtt_Client.cs" />
-    <Compile Include="Neplan_Client.cs" />
-    <Compile Include="Parameter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

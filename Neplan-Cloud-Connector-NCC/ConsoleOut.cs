@@ -9,6 +9,7 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class ConsoleOut
     {
+        static private string space = "    ";
         public static void ShowStart(string mqttUrl, string mqttTopic, string neplanServiceUrl)
         {
             Console.WriteLine("%%%%% Start: Application (V 1.0) %%%%%\n");
@@ -21,23 +22,28 @@ namespace Neplan_Cloud_Connector_NCC
             Console.WriteLine("    username: not set (pending via mqtt)");
             Console.WriteLine("    password: not set (pending via mqtt)");
             Console.WriteLine("    project:  not set (pending via mqtt)\n");
-            Console.WriteLine("%%%%% Ready to receive commands %%%%%\n");
+        }
+        public static void ShowMsgReceived(string msg)
+        {
+            Console.WriteLine("--> MESSAGE RECEIVED: ");
+            Console.WriteLine(msg + "\n");
+        }
+        public static void ShowFunction(Command cmd)
+        {
+            Console.WriteLine("--> FUNCTION NAME: " + cmd.FunctionName);
+            if (!cmd.Error)
+                Console.WriteLine(space + "SUCCESS: function found\n");
         }
 
-        public static void ShowMethodInfo(Command cmd)
+        public static void ShowParameters(Command cmd)
         {
-            Console.WriteLine("--> Funktion:");
-            Console.WriteLine(cmd.FunctionName + "\n");
-            Console.WriteLine("--> Benötigte Parameter:");
-
-
             // get values
             List<string[]> stringArrays = new List<string[]>();
             string[] titles = { "name", "type", "isRequired", "isSetByInput", "value" };
             stringArrays.Add(titles);
             foreach (Parameter thisPar in cmd.Input.Values)
             {
-                string[] str = { thisPar.Name, thisPar.Type, thisPar.Reuired.ToString(), thisPar.SetByInput.ToString(), (thisPar.Value ?? "-").ToString() };
+                string[] str = { thisPar.Name, (thisPar.Type ?? "-"), thisPar.Reuired.ToString(), thisPar.SetByInput.ToString(), (thisPar.Value ?? "-").ToString() };
                 stringArrays.Add(str);
             }
 
@@ -51,19 +57,61 @@ namespace Neplan_Cloud_Connector_NCC
                 }
             }
 
-            // print out
-            string format = "|{0,-" + sizes[0] + "}|{1,-" + sizes[1] + "}|{2,-" + sizes[2] + "}|{3,-" + sizes[3] + "}|{4,-" + sizes[4] + "}|";
-            for (int i = 0; i < stringArrays.Capacity; i++)
+            // set fromat
+            string format = "|";
+            for (int i = 0; i < titles.Length; i++)
             {
-                string stringLine = String.Format(format, stringArrays[i]);
-                if (i == 0)
-                    Console.WriteLine(new String('-', stringLine.Length));
-                Console.WriteLine(String.Format(format, stringArrays[i]));
-                if (i == 0 || i == stringArrays.Capacity - 1)
-                    Console.WriteLine(new String('-', stringLine.Length));
+                format = format + "{" + i.ToString() + ",-" + sizes[i] + "}|";
             }
-            Console.WriteLine("\n");
+
+
+            // print out
+            string info = "--> PARAMETERS:";
+            if (stringArrays.Count > 1)
+            {
+                Console.WriteLine(info);
+                for (int i = 0; i < stringArrays.Count; i++)
+                {
+                    string stringLine = String.Format(format, stringArrays[i]);
+                    if (i == 0)
+                        Console.WriteLine(space + new String('-', stringLine.Length));
+                    Console.WriteLine(space + String.Format(format, stringArrays[i]));
+                    if (i == 0 || i == stringArrays.Count - 1)
+                        Console.WriteLine(space + new String('-', stringLine.Length));
+                }
+            }
+            else
+            {
+                Console.WriteLine(info + " none");
+            }
+            if (!cmd.Error)
+                Console.WriteLine(space + "SUCCESS: all parameters set\n");
+
+        }
+        public static void ShowResults(Command cmd)
+        {
+            string info = "--> RESULTS:";
             
+            if (cmd.Output != null)
+            {
+                Console.WriteLine(info);
+                Console.WriteLine(space + "Type: " + cmd.Output.GetType().ToString());
+            }
+            else
+            {
+                Console.WriteLine(info + " none");
+            }
+
+
+            if (!cmd.Error)
+                Console.WriteLine(space + "SUCCESS: function was called successfully\n");
+        }
+        public static void ShowEnd(bool isOK)
+        {
+            if (isOK)
+                Console.WriteLine("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SUCCESS & DONE! WAITING FOR NEW COMMANDS ... \n\n");
+            else
+                Console.WriteLine("\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NO SUCCESS but DONE! WAITING FOR NEW COMMANDS ... \n\n");
         }
     }
 }

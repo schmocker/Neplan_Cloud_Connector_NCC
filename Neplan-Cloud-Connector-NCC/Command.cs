@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Neplan_Cloud_Connector_NCC.NeplanService;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,13 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class Command
     {
-        public string FunctionName, ClassName;
+        public string FunctionName;
 
-        public object ObjectHandler;
-        public MethodInfo Method;
+        //public object ObjectHandler;
+        //public MethodInfo Method;
 
 
-        public ParameterDictionary Input = new ParameterDictionary();
+        public Dictionary<string, Parameter> Input = new Dictionary<string, Parameter>();
         public object Output;
 
         public bool Error = false;
@@ -27,113 +28,186 @@ namespace Neplan_Cloud_Connector_NCC
         public string ErrorMsg, ExceptionMsg;
 
         // Constructor Cmethods
-        public Command(string fcnName)
+        public Command(object objectHandler, string fcnName, Dictionary<string, object> input)
         {
-            this.FunctionName = fcnName;
-        }
-        public Command(string fcnName, object objectHandler)
-        {
-            this.FunctionName = fcnName;
-            this.ObjectHandler = objectHandler;
-            ClassName = objectHandler.GetType().ToString();
-            Method = objectHandler.GetType().GetMethod(fcnName);
-
-            foreach (var par in Method.GetParameters())
-                Input.AddRequired(par);
-        }
-        // Clone method to copy an instance
-        public Command Clone()
-        {
-            return (Command)this.MemberwiseClone();
-        }
-
-
-        // Run method
-        public void Run()
-        {
-            
-
-        }
-
-        public void setError(string msg, Exception e = null)
-        {
-            Error = true;
-            ErrorMsg = msg;
-            Console.WriteLine("--> Error: "+ ErrorMsg + "\n");
-            if (e != null)
+            ////////////////////////////////////////
+            // check object handler
+            ////////////////////////////////////////
+            if (objectHandler == null)
             {
-                ExceptionMsg = e.ToString();
-                Console.WriteLine("    System message: " + ExceptionMsg + "\n");
+                SetError("Method could not be found");
+                return;
             }
-        }
 
-        public void SetParameters(Dictionary<string, object> input)
-        {
+
+
+            ////////////////////////////////////////
+            // set method
+            ////////////////////////////////////////
+            MethodInfo Method;
             try
             {
-                foreach (Parameter par in Input.Values)
+                FunctionName = fcnName;
+                Method = objectHandler.GetType().GetMethod(FunctionName);
+            }
+            catch (Exception e)
+            {
+                SetError("Method could not be found",e);
+                return;
+            }
+            try
+            {
+                ConsoleOut.ShowFunction(this);
+            }
+            catch (Exception e)
+            {
+                SetWarning("method could not be shown in console", e);
+            }
+
+            
+
+
+            ////////////////////////////////////////
+            // set parameters
+            ////////////////////////////////////////
+            // create list for parametervalues to invoke the method with
+            List<object> values = new List<object>(); 
+            // set required parameters
+            try
+            {
+                
+                foreach (ParameterInfo parInfo in Method.GetParameters())
                 {
-                    if (input.ContainsKey(par.Name))
+                    Parameter p = new Parameter
                     {
-                        par.SetValue(input[par.Name]);
-                        input.Remove(par.Name);
-                        par.SetByInput = true;
+                        Name = parInfo.Name,
+                        Type = parInfo.ParameterType.ToString(),
+                        Reuired = true
+                    };
+                    if (input.ContainsKey(parInfo.Name))
+                    {
+                        switch (p.Type)
+                        {
+                            case "Neplan_Cloud_Connector_NCC.NeplanService.ExternalProject":
+                                p.Value = ((NeplanServiceClient)objectHandler).GetProject((string)input[p.Name], null, null, null);
+                                break;
+                            case "System.String":
+                                p.Value = (string)input[p.Name];
+                                break;
+                            case "System.Int32":
+                                p.Value = Convert.ToInt32(input[p.Name]);
+                                break;
+                            case "System.DateTime":
+                                int[] DateVec = ((JArray)input[p.Name]).ToObject<int[]>();
+                                p.Value = new DateTime(DateVec[0], DateVec[1], DateVec[2], DateVec[3], DateVec[4], DateVec[5]);
+                                break;
+                            default:
+                                p.Value = null;
+                                SetError("Could not convert " + p.Name + " to datatype " + p.Type + ". There is no method for this datatype.");
+                                break;
+                        }
+                        values.Add(p.Value);
+                        p.SetByInput = true;
+                        input.Remove(p.Name);
                     }
                     else
                     {
-                        setError("Parameter '"+par.Name+"' missing");
+                        p.SetByInput = false;
+                        SetError("parameter " + parInfo.Name + " missing");
+                    }
+                    Input.Add(parInfo.Name, p);
+                }
+            }
+            catch (Exception e)
+            {
+                SetError("required parameter could not be set", e);
+            }
+            // set additional parameters
+            if (!Error)
+            {
+                try
+                {
+                    foreach (KeyValuePair<string, object> item in input)
+                    {
+                        Parameter p = new Parameter
+                        {
+                            Name = item.Key,
+                            Value = item.Value,
+                            Type = item.Value.GetType().ToString(),
+                            Reuired = false,
+                            SetByInput = true
+                        };
+                        Input.Add(item.Key, p);
                     }
                 }
-                foreach (var item in input)
+                catch (Exception e)
                 {
-                    // unbenötigte parameter -> ergänzen
+                    SetWarning("unused parameter could not be set", e);
                 }
             }
-            catch (Exception e)
-            {
-                setError("Parameters not set",e);
-            }
-        }
-
-
-        public void Invoke()
-        {
+            // show parameters in console
             try
             {
-                Output = Method.Invoke(ObjectHandler, Input.GetRequiredValues());
-                Console.WriteLine("Method invoked");
+                ConsoleOut.ShowParameters(this);
             }
             catch (Exception e)
             {
-                setError("Method not invoked", e);
+                SetWarning("parameters could not be shown in console", e);
             }
-        }
-        public void ConvertOutput()
-        {
-            if (Output != null)
+            if (Error) return;
+            ////////////////////////////////////////
+
+
+            ////////////////////////////////////////
+            // invoke methode
+            ////////////////////////////////////////
+            try
             {
-                Console.WriteLine(Output.GetType().ToString());
-                switch (Output.GetType().ToString())
+                Output = Method.Invoke(objectHandler, values.ToArray());
+            }
+            catch (Exception e)
+            {
+                SetError("method could not be invoked", e);
+                return;
+            }
+
+            ////////////////////////////////////////
+            // conver output
+            ////////////////////////////////////////
+            try
+            {
+                if (Output != null)
                 {
-                    case "System.String[]":
-                        string[] a = (string[])Output;
-                        Output = xml2dir(a[0]);
-                        break;
-                    default:
-                        break;
+                    switch (Output.GetType().ToString())
+                    {
+                        case "System.String[]":
+                            string[] a = (string[])Output;
+                            Output = xml2dir(a[0]);
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                SetWarning("output could not be converted", e);
+            }
+
+            ////////////////////////////////////////
+            // conver output
+            ////////////////////////////////////////
+            try
+            {
+                ConsoleOut.ShowResults(this);
+            }
+            catch (Exception e)
+            {
+                SetWarning("output could not be shown in console", e);
+            }
+            
         }
 
-        public Dictionary<string, object> Results()
-        {
-            Dictionary<string, object> result = new Dictionary<string, object>();
-            result.Add("Input", Input);
-            result.Add("Output", Output);
-            result.Add("Received", Received);
-            result.Add("Done", Done);
-            return result;
-        }
 
         private static Dictionary<string, object> xml2dir(string xml_string)
         {
@@ -143,13 +217,26 @@ namespace Neplan_Cloud_Connector_NCC
             Dictionary<string, object> obj = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
             return obj;
         }
-    }
-    class CommandDictionary : Dictionary<string, Command>
-    {
-        public void AddNew(string methodName, object objectHandler)
+
+
+        public void SetError(string msg, Exception e = null)
         {
-            Command cmd = new Command(methodName, objectHandler);
-            this.Add(methodName, cmd);
+            Error = true;
+            ErrorMsg = msg;
+            Console.WriteLine("--> Error: " + ErrorMsg + "\n");
+            if (e != null)
+            {
+                ExceptionMsg = e.ToString();
+                Console.WriteLine("    System message: " + ExceptionMsg + "\n");
+            }
+        }
+        public void SetWarning(string msg, Exception e = null)
+        {
+            Console.WriteLine("--> Warrning: " + msg + "\n");
+            if (e != null)
+            {
+                Console.WriteLine("    System message: " + e.ToString() + "\n");
+            }
         }
     }
 }
