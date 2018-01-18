@@ -63,15 +63,14 @@ namespace Neplan_Cloud_Connector_NCC
                 SetWarning("method could not be shown in console", e);
             }
 
-            
+
 
 
             ////////////////////////////////////////
-            // set parameters
+            // set required parameters
             ////////////////////////////////////////
             // create list for parametervalues to invoke the method with
             List<object> values = new List<object>(); 
-            // set required parameters
             try
             {
                 
@@ -121,7 +120,10 @@ namespace Neplan_Cloud_Connector_NCC
             {
                 SetError("required parameter could not be set", e);
             }
+
+            ////////////////////////////////////////
             // set additional parameters
+            ////////////////////////////////////////
             if (!Error)
             {
                 try
@@ -144,7 +146,10 @@ namespace Neplan_Cloud_Connector_NCC
                     SetWarning("unused parameter could not be set", e);
                 }
             }
+
+            ////////////////////////////////////////
             // show parameters in console
+            ////////////////////////////////////////
             try
             {
                 ConsoleOut.ShowParameters(this);
@@ -194,7 +199,7 @@ namespace Neplan_Cloud_Connector_NCC
             }
 
             ////////////////////////////////////////
-            // conver output
+            // show results output
             ////////////////////////////////////////
             try
             {
@@ -204,7 +209,8 @@ namespace Neplan_Cloud_Connector_NCC
             {
                 SetWarning("output could not be shown in console", e);
             }
-            
+
+            Done = true;
         }
 
 
@@ -243,6 +249,4 @@ namespace Neplan_Cloud_Connector_NCC
             }
         }
     }
-
-    [XmlRoot("Object"), JsonObject]
 }

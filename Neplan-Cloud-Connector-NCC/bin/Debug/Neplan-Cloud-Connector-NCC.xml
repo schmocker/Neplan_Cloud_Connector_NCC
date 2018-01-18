@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neplan-Cloud-Connector-NCC</name>
+    </assembly>
+    <members>
+        <member name="M:Neplan_Cloud_Connector_NCC.Controller.TreatCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="input"></param>
+        </member>
+    </members>
+</doc>

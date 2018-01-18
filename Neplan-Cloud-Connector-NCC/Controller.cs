@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -14,6 +15,7 @@ namespace Neplan_Cloud_Connector_NCC
     {
         private Mqtt_Client mqttClient;
 
+        bool inDebugMode = true;
         string propPath = @"C:\Users\tobias.schmocker\desktop\properties.txt";
 
         public NeplanServiceClient neplanServiceClient;
@@ -93,24 +95,22 @@ namespace Neplan_Cloud_Connector_NCC
                 Environment.Exit(1);
             }
         }
+
         
 
+
         /// <summary>
-        /// 
+        /// In dieser methode....
         /// </summary>
-        /// <param name="methodName"></param>
+        /// <param name="methodName">ich bin parameter 1</param>
         /// <param name="input"></param>
         public void TreatCommand(string methodName, Dictionary<string,object> input)
         {
-            // set object handler & name & input
-            // the object handler is the object, that handlse the method bzw. the command.
-            Command cmd;
-            if (validMethodNames.Contains(methodName))
-                cmd = new Command(neplanServiceClient, methodName, input);
-            else
-                cmd = new Command(null, methodName, input);
-            // publish results
-            cmd.Done = true;
+            // forward the command
+            Command cmd = new Command(neplanServiceClient, methodName, input);
+
+
+            // publish the whole command
             string msg_json = JsonConvert.SerializeObject(cmd);
             mqttClient.PublishMsg(msg_json);
             ConsoleOut.ShowEnd(!cmd.Error);
@@ -140,6 +140,9 @@ namespace Neplan_Cloud_Connector_NCC
             #endregion
         }
     }
+    /// <summary>
+    /// Summery
+    /// </summary>
     class Parameter
     {
         public string Name;

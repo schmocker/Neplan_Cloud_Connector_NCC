@@ -544,3 +544,4 @@ C:\Users\tobias.schmocker\Documents\GitHub\Neplan_Cloud_Connector_NCC\Neplan-Clo
 C:\Users\tobias.schmocker\Documents\GitHub\Neplan_Cloud_Connector_NCC\Neplan-Cloud-Connector-NCC\obj\Debug\Neplan-Cloud-Connector-NCC.application
 C:\Users\tobias.schmocker\Documents\GitHub\Neplan_Cloud_Connector_NCC\Neplan-Cloud-Connector-NCC\obj\Debug\Neplan-Cloud-Connector-NCC.exe
 C:\Users\tobias.schmocker\Documents\GitHub\Neplan_Cloud_Connector_NCC\Neplan-Cloud-Connector-NCC\obj\Debug\Neplan-Cloud-Connector-NCC.pdb
+Z:\GitHub\Neplan_Cloud_Connector_NCC\Neplan-Cloud-Connector-NCC\bin\Debug\Neplan-Cloud-Connector-NCC.xml
