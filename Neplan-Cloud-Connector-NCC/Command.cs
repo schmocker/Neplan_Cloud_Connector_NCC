@@ -3,11 +3,10 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Neplan_Cloud_Connector_NCC
 {
@@ -209,12 +208,17 @@ namespace Neplan_Cloud_Connector_NCC
         }
 
 
-        private static Dictionary<string, object> xml2dir(string xml_string)
+        private static object xml2dir(string xml_string)
         {
+            //var serializer = new XmlSerializer(typeof(Root));
+            //var root = (Root)serializer.Deserialize(new StringReader(xml_string));
+            //Console.WriteLine(JsonConvert.SerializeObject(root, Newtonsoft.Json.Formatting.Indented));
+
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml_string);
-            string json = JsonConvert.SerializeXmlNode(doc);
-            Dictionary<string, object> obj = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+            object obj = JsonConvert.SerializeXmlNode(doc, Newtonsoft.Json.Formatting.None);
+            //Dictionary<string, object> obj = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+            
             return obj;
         }
 
@@ -239,4 +243,6 @@ namespace Neplan_Cloud_Connector_NCC
             }
         }
     }
+
+    [XmlRoot("Object"), JsonObject]
 }
