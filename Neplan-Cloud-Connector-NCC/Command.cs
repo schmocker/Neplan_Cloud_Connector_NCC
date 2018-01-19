@@ -17,12 +17,6 @@ namespace Neplan_Cloud_Connector_NCC
         //public object ObjectHandler;
         //public MethodInfo Method;
 
-        // more comments
-        // more comments
-        // more comments
-        // more comments
-
-
         public Dictionary<string, Parameter> Input = new Dictionary<string, Parameter>();
         public object Output;
 
