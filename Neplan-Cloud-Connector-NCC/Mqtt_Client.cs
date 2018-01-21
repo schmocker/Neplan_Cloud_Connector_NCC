@@ -12,8 +12,7 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class Mqtt_Client
     {
-        private string url;
-        private string topic;
+        private string url, topic, ToClient = "NCC2Client", FromClient = "Client2NCC";
 
         private Controller controller;
         public MqttClient client;
@@ -26,7 +25,7 @@ namespace Neplan_Cloud_Connector_NCC
             client.MqttMsgPublishReceived += ReceiveMsg;
             string clientId = Guid.NewGuid().ToString();
             client.Connect(clientId);
-            client.Subscribe(new string[] { topic + "/toService" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
         }
         public void setController(Controller controller)
         {
@@ -35,41 +34,48 @@ namespace Neplan_Cloud_Connector_NCC
 
         public void ReceiveMsg(object sender, MqttMsgPublishEventArgs msg)
         {
-            SendReceipt();
-            string methodName = null;
             Dictionary<string, object> input = new Dictionary<string, object>();
             try
             {
+                
+
                 string json_string = System.Text.Encoding.UTF8.GetString(msg.Message);
-
-                ConsoleOut.ShowMsgReceived(json_string);
-                //pretty: ConsoleOut.ShowMsgReceived(JToken.Parse(json_string).ToString(Newtonsoft.Json.Formatting.Indented));
-
+                
                 JObject json = JsonConvert.DeserializeObject<JObject>(json_string);
-                methodName = (string)json["FunctionName"];
-                input = json["Input"].ToObject<Dictionary<string, object>>();
+                
+                if ((string)json["Direction"] == FromClient)
+                {
+                    ConsoleOut.ShowMsgReceived();
+                    string methodName = (string)json["FunctionName"];
+                    string id = (string)json["ID"];
+                    input = json["Input"].ToObject<Dictionary<string, object>>();
+                    controller.TreatCommand(id, methodName, input);
+                }
             }
             catch (Exception e)
             {
+                Console.WriteLine("--> Message received but following error accured:");
                 Console.WriteLine(e);
             }
-            controller.TreatCommand(methodName, input);
+            
         }
 
-        public void SendReceipt()
+        public void PublishMsg(Command cmd)
         {
-            Dictionary<string, bool> receipt = new Dictionary<string, bool>();
-            receipt.Add("Received" , true);
-            receipt.Add("Done" , false);
-            JToken json = JToken.FromObject(receipt);
-            string msg_json = JsonConvert.SerializeObject(json);
-            PublishMsg(msg_json);
-        }
-
-        public void PublishMsg(string msg_json)
-        {
+            cmd.Direction = ToClient;
+            string msg_json = JsonConvert.SerializeObject(cmd);
             byte[] msg_bytes = Encoding.UTF8.GetBytes(msg_json);
-            client.Publish(topic + "/fromService", msg_bytes, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+            client.Publish(topic , msg_bytes, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+        }
+
+        public void PublishMsg(string key, object value)
+        {
+            Dictionary<string, object> msg = new Dictionary<string, object>();
+            msg.Add(key, value);
+            msg.Add("Direction", ToClient);
+            string msg_json = JsonConvert.SerializeObject(msg);
+            byte[] msg_bytes = Encoding.UTF8.GetBytes(msg_json);
+            client.Publish(topic, msg_bytes, MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         }
     }
 }

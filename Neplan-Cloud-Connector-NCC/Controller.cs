@@ -15,16 +15,16 @@ namespace Neplan_Cloud_Connector_NCC
     {
         private Mqtt_Client mqttClient;
 
-        bool inDebugMode = true;
-        string propPath = @"C:\Users\tobias.schmocker\desktop\properties.txt";
-
         public NeplanServiceClient neplanServiceClient;
         private string neplanServiceUrl = "https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
         public ExternalProject project;
 
         List<string> validMethodNames = new List<string>();
-        public Controller()
+        public Controller(string propertiesPath)
         {
+
+
+
             string nccUsername = null;
             string nccPassword = null;
             string nccPprojectname = null;
@@ -33,7 +33,7 @@ namespace Neplan_Cloud_Connector_NCC
 
             try
             {
-                string[] lines = System.IO.File.ReadAllLines(propPath);
+                string[] lines = System.IO.File.ReadAllLines(propertiesPath);
                 for (int i = 0; i < lines.Length; i++)
                 {
                     String[] s = lines[i].Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
@@ -46,11 +46,13 @@ namespace Neplan_Cloud_Connector_NCC
             }
             catch (Exception e)
             {
-                Console.WriteLine("properties could not be importet from " + propPath);
+                Console.WriteLine("properties could not be importet from " + propertiesPath);
                 Console.WriteLine(e);
                 Console.WriteLine("Press any key to exit.");
                 Console.ReadKey();
                 Environment.Exit(1);
+
+
             }
 
             try
@@ -94,6 +96,7 @@ namespace Neplan_Cloud_Connector_NCC
                 Console.ReadKey();
                 Environment.Exit(1);
             }
+            mqttClient.PublishMsg("NCCisRunning", true);
         }
 
         
@@ -104,15 +107,15 @@ namespace Neplan_Cloud_Connector_NCC
         /// </summary>
         /// <param name="methodName">ich bin parameter 1</param>
         /// <param name="input"></param>
-        public void TreatCommand(string methodName, Dictionary<string,object> input)
+        public void TreatCommand(string id, string methodName, Dictionary<string,object> input)
         {
             // forward the command
-            Command cmd = new Command(neplanServiceClient, methodName, input);
+            Command cmd = new Command(neplanServiceClient, id, methodName, input);
 
 
             // publish the whole command
-            string msg_json = JsonConvert.SerializeObject(cmd);
-            mqttClient.PublishMsg(msg_json);
+            cmd.Done = true;
+            mqttClient.PublishMsg(cmd);
             ConsoleOut.ShowEnd(!cmd.Error);
         }
         

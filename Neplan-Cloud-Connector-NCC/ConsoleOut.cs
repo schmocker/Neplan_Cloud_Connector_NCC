@@ -23,10 +23,9 @@ namespace Neplan_Cloud_Connector_NCC
             Console.WriteLine("    password: not set (pending via mqtt)");
             Console.WriteLine("    project:  not set (pending via mqtt)\n");
         }
-        public static void ShowMsgReceived(string msg)
+        public static void ShowMsgReceived()
         {
-            Console.WriteLine("--> MESSAGE RECEIVED: ");
-            Console.WriteLine(msg + "\n");
+            Console.WriteLine("--> MESSAGE RECEIVED\n");
         }
         public static void ShowFunction(Command cmd)
         {

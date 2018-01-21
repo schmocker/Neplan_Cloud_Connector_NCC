@@ -12,7 +12,7 @@ namespace Neplan_Cloud_Connector_NCC
 {
     class Command
     {
-        public string FunctionName;
+        public string ID, FunctionName, Direction;
 
         //public object ObjectHandler;
         //public MethodInfo Method;
@@ -21,13 +21,13 @@ namespace Neplan_Cloud_Connector_NCC
         public object Output;
 
         public bool Error = false;
-        public bool Received = false;
         public bool Done = false;
         public string ErrorMsg, ExceptionMsg;
 
         // Constructor Cmethods
-        public Command(object objectHandler, string fcnName, Dictionary<string, object> input)
+        public Command(object objectHandler, string id, string fcnName, Dictionary<string, object> input)
         {
+            ID = id;
             ////////////////////////////////////////
             // check object handler
             ////////////////////////////////////////
@@ -209,7 +209,7 @@ namespace Neplan_Cloud_Connector_NCC
                 SetWarning("output could not be shown in console", e);
             }
 
-            Done = true;
+            
         }
 
 
