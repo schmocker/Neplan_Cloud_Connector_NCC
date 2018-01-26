@@ -4,13 +4,6 @@
         <name>Neplan-Cloud-Connector-NCC</name>
     </assembly>
     <members>
-        <member name="M:Neplan_Cloud_Connector_NCC.Controller.TreatCommand(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
-            <summary>
-            In dieser methode....
-            </summary>
-            <param name="methodName">ich bin parameter 1</param>
-            <param name="input"></param>
-        </member>
         <member name="T:Neplan_Cloud_Connector_NCC.Parameter">
             <summary>
             Summery

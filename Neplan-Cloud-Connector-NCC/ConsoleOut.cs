@@ -12,7 +12,7 @@ namespace Neplan_Cloud_Connector_NCC
         static private string space = "    ";
         public static void ShowStart(string mqttUrl, string mqttTopic, string neplanServiceUrl)
         {
-            Console.WriteLine("%%%%% Start: Application (V 1.0) %%%%%\n");
+            Console.WriteLine("%%%%% Start: Application (V 1.1) %%%%%\n");
             Console.WriteLine("MQTT-Client details:");
             Console.WriteLine("    broker:   " + mqttUrl + "(set in C#)");
             Console.WriteLine("    topic:    " + mqttTopic + "(set in C#)\n");
