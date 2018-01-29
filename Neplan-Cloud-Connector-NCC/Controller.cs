@@ -107,7 +107,7 @@ namespace Neplan_Cloud_Connector_NCC
                 // show start information in the console
                 string neplanServiceUrl
                     = neplanServiceClient.Endpoint.Address.Uri.AbsoluteUri;
-                ConsoleOut.ShowStart(mqttUrl, mqttTopic, neplanServiceUrl);
+                ConsoleOut.ShowStart(mqttUrl, mqttTopic, neplanServiceUrl, nccUsername, nccPprojectname);
                 ConsoleOut.ShowEnd(true);
 
                 // tell the NCC-Client that this program is up and running
