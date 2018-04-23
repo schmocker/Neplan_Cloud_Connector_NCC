@@ -1,0 +1,6 @@
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\bin\Debug\NCC.dll
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\bin\Debug\NCC.pdb
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\obj\Debug\NCC.csprojResolveAssemblyReference.cache
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\obj\Debug\NCC.csproj.CoreCompileInputs.cache
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\obj\Debug\NCC.dll
+C:\Users\tobias.schmocker\Desktop\Neplan_Cloud_Connector_NCC\src\NCC\obj\Debug\NCC.pdb

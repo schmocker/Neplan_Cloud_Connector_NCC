@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCC", "NCC\NCC.csproj", "{DDEA3B9A-4B8F-4735-A7D9-580C68805511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCC_TESTER", "NCC_TESTER\NCC_TESTER.csproj", "{3332C4DA-E3EF-481E-A312-0DAB43166C40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F2CF9C4-8EC5-494A-AA51-4AB0327B96B0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDEA3B9A-4B8F-4735-A7D9-580C68805511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDEA3B9A-4B8F-4735-A7D9-580C68805511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDEA3B9A-4B8F-4735-A7D9-580C68805511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDEA3B9A-4B8F-4735-A7D9-580C68805511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3332C4DA-E3EF-481E-A312-0DAB43166C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3332C4DA-E3EF-481E-A312-0DAB43166C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3332C4DA-E3EF-481E-A312-0DAB43166C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3332C4DA-E3EF-481E-A312-0DAB43166C40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12D6F49A-A347-47AD-922E-44B4DBC04F0F}
+	EndGlobalSection
+EndGlobal
