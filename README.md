@@ -9,7 +9,8 @@ The dll allows any other program to send neplan commands and inputs to Neplan Cl
 * Neplan Cloud Webservices module has to be activated by Neplan
 
 ## Howto
-```matlab
+Here is an example on how to use the dll in Matlab.
+```Matlab
 NCC_dll = NET.addAssembly('path/NCC.dll');
 
 url =		"https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
