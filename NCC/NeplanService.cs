@@ -10,7 +10,7 @@
 
 using System.Runtime.Serialization;
 
-[assembly: System.Runtime.Serialization.ContractNamespaceAttribute("", ClrNamespace="")]
+[assembly: System.Runtime.Serialization.ContractNamespaceAttribute("", ClrNamespace = "")]
 
 namespace NCC
 {
@@ -3717,22 +3717,22 @@ namespace NCC
         System.Threading.Tasks.Task<string> GetCalculationSettingsAsync(NCC.ExternalProject project, string analysisType);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByID", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByIDResponse")]
-        string GetResultElementByID(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.DateTime simulationDateTime);
+        string GetResultElementByID(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByID", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByIDResponse")]
-        System.Threading.Tasks.Task<string> GetResultElementByIDAsync(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.DateTime simulationDateTime);
+        System.Threading.Tasks.Task<string> GetResultElementByIDAsync(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultsElementsByID", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultsElementsByIDResponse")]
-        BCP.Neplan.Web.Services.External.NeplanServiceElementResult[] GetResultsElementsByID(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.DateTime simulationDateTime);
+        BCP.Neplan.Web.Services.External.NeplanServiceElementResult[] GetResultsElementsByID(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultsElementsByID", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultsElementsByIDResponse")]
-        System.Threading.Tasks.Task<BCP.Neplan.Web.Services.External.NeplanServiceElementResult[]> GetResultsElementsByIDAsync(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.DateTime simulationDateTime);
+        System.Threading.Tasks.Task<BCP.Neplan.Web.Services.External.NeplanServiceElementResult[]> GetResultsElementsByIDAsync(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByName", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByNameResponse")]
-        string GetResultElementByName(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.DateTime simulationDateTime);
+        string GetResultElementByName(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByName", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/GetResultElementByNameResponse")]
-        System.Threading.Tasks.Task<string> GetResultElementByNameAsync(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.DateTime simulationDateTime);
+        System.Threading.Tasks.Task<string> GetResultElementByNameAsync(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://www.neplan.ch/Web/External/NeplanService/AnalyseVariantWithAnalysisSetting" +
             "s", ReplyAction = "http://www.neplan.ch/Web/External/NeplanService/AnalyseVariantWithAnalysisSetting" +
@@ -6227,32 +6227,32 @@ namespace NCC
             return base.Channel.GetCalculationSettingsAsync(project, analysisType);
         }
 
-        public string GetResultElementByID(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public string GetResultElementByID(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultElementByID(project, elementID, portNr, analysisType, simulationDateTime);
         }
 
-        public System.Threading.Tasks.Task<string> GetResultElementByIDAsync(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public System.Threading.Tasks.Task<string> GetResultElementByIDAsync(NCC.ExternalProject project, string elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultElementByIDAsync(project, elementID, portNr, analysisType, simulationDateTime);
         }
 
-        public BCP.Neplan.Web.Services.External.NeplanServiceElementResult[] GetResultsElementsByID(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public BCP.Neplan.Web.Services.External.NeplanServiceElementResult[] GetResultsElementsByID(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultsElementsByID(project, elementID, portNr, analysisType, simulationDateTime);
         }
 
-        public System.Threading.Tasks.Task<BCP.Neplan.Web.Services.External.NeplanServiceElementResult[]> GetResultsElementsByIDAsync(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public System.Threading.Tasks.Task<BCP.Neplan.Web.Services.External.NeplanServiceElementResult[]> GetResultsElementsByIDAsync(NCC.ExternalProject project, string[] elementID, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultsElementsByIDAsync(project, elementID, portNr, analysisType, simulationDateTime);
         }
 
-        public string GetResultElementByName(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public string GetResultElementByName(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultElementByName(project, elementName, elementTypeName, portNr, analysisType, simulationDateTime);
         }
 
-        public System.Threading.Tasks.Task<string> GetResultElementByNameAsync(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.DateTime simulationDateTime)
+        public System.Threading.Tasks.Task<string> GetResultElementByNameAsync(NCC.ExternalProject project, string elementName, string elementTypeName, int portNr, string analysisType, System.Nullable<System.DateTime> simulationDateTime)
         {
             return base.Channel.GetResultElementByNameAsync(project, elementName, elementTypeName, portNr, analysisType, simulationDateTime);
         }
@@ -6882,6 +6882,8 @@ namespace NCC
 
             private string NameField;
 
+            private System.Nullable<System.DateTime> SimulationTimeField;
+
             private string XMLdataField;
 
             private short portNrField;
@@ -6921,6 +6923,19 @@ namespace NCC
                 set
                 {
                     this.NameField = value;
+                }
+            }
+
+            [System.Runtime.Serialization.DataMemberAttribute()]
+            public System.Nullable<System.DateTime> SimulationTime
+            {
+                get
+                {
+                    return this.SimulationTimeField;
+                }
+                set
+                {
+                    this.SimulationTimeField = value;
                 }
             }
 

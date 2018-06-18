@@ -1,0 +1,30 @@
+c:\Users\tobias.schmocker\source\repos\NCC\Test\bin\Debug\Test.exe.config
+c:\Users\tobias.schmocker\source\repos\NCC\Test\bin\Debug\Test.exe
+c:\Users\tobias.schmocker\source\repos\NCC\Test\bin\Debug\Test.pdb
+c:\Users\tobias.schmocker\source\repos\NCC\Test\bin\Debug\NCC.dll
+c:\Users\tobias.schmocker\source\repos\NCC\Test\bin\Debug\NCC.pdb
+c:\Users\tobias.schmocker\source\repos\NCC\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\Users\tobias.schmocker\source\repos\NCC\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+c:\Users\tobias.schmocker\source\repos\NCC\Test\obj\Debug\Test.csproj.CopyComplete
+c:\Users\tobias.schmocker\source\repos\NCC\Test\obj\Debug\Test.exe
+c:\Users\tobias.schmocker\source\repos\NCC\Test\obj\Debug\Test.pdb
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\bin\Debug\Test.exe.config
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\bin\Debug\Test.exe
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\bin\Debug\Test.pdb
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\bin\Debug\NCC.dll
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\bin\Debug\NCC.pdb
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\obj\Debug\Test.exe
+C:\Users\tobias.schmocker\Desktop\new\NCC\Test\obj\Debug\Test.pdb
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\obj\Debug\Test.exe
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\obj\Debug\Test.pdb
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\bin\Debug\Test.exe.config
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\bin\Debug\Test.exe
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\bin\Debug\Test.pdb
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\bin\Debug\NCC.dll
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\bin\Debug\NCC.pdb
+C:\Users\tobias.schmocker\Google Drive\Development\FHNW - NCC\new\NCC\Test\obj\Debug\Test.csproj.CopyComplete

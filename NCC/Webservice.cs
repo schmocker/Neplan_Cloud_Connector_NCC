@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+using System.Text;
 using System.Security.Cryptography;
 using System.ServiceModel;
-using System.Text;
+using System.IO;
 
 namespace NCC
 {
-    public class Webservice : NeplanServiceClient
+    public class WebService : NeplanServiceClient
     {
-
         public NeplanServiceClient nepService;
 
-        public Webservice(String ws_adress, String username, String password)
+        public WebService(String ws_adress, String username, String password)
             : base(GetBinding(), new EndpointAddress(ws_adress))
         {
             this.ClientCredentials.UserName.UserName = username;
@@ -26,7 +24,18 @@ namespace NCC
             binding.Security.Mode = SecurityMode.TransportWithMessageCredential;
             binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.None;
             binding.Security.Message.ClientCredentialType = MessageCredentialType.UserName;
+            binding.MaxReceivedMessageSize = 65536 * 100;
             return binding;
+        }
+
+        public bool UploadXML(ExternalProject project, string measurements, string path)
+        {
+            Stream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            string uploadName = NepMeasUpload(fs);
+
+            Boolean x = ImportMeasuredDataFromXMlFile(project, uploadName, measurements);
+            fs.Close();
+            return x;
         }
 
         private static string getMd5Hash(string input)
@@ -51,23 +60,6 @@ namespace NCC
             return sBuilder.ToString();
             #endregion
         }
-        public Dictionary<string, Object> GetMethodSpecifications(string MethodName)
-        {
-            MethodInfo method = this.GetType().GetMethod(MethodName);
-            ParameterInfo[] parameters = method.GetParameters();
 
-            Dictionary<string, Object> mehodSpecification = new Dictionary<string, Object>();
-
-            Dictionary<string, Object>[] Inputs = new Dictionary<String, Object>[parameters.Length];
-            for (int i = 0; i < parameters.Length; i++)
-            {
-                Inputs[i] = new Dictionary<string, Object>();
-                Inputs[i].Add("Name", parameters[i].Name);
-                Inputs[i].Add("Type", parameters[i].ParameterType.ToString());
-            }
-            mehodSpecification.Add("Inputs", Inputs);
-            mehodSpecification.Add("Output", method.ReturnType.ToString());
-            return mehodSpecification;
-        }
     }
 }
