@@ -15,6 +15,7 @@ Here is an example on how to use the dll in Matlab (tested in Matlab R2018a)
 url = "https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
 username =	"username";
 pasword =	"password";
+maxReturnSize = 65536 * 10000
 project_name =	"Neplan_Project_X";
 
 % load libraries
@@ -23,7 +24,7 @@ import System.*
 import DateTime.*
 
 % creat and open webservice
-ws = NCC.Webservice(url,username,password);
+ws = NCC.Webservice(url,username,password,maxReturnSize);
 ws.Open();
 
 % get project
