@@ -1,18 +1,18 @@
-# Neplan-Cloud-Connector-NCC
-This is a dll to connect to the Neplan Cloud.
-All about the Neplan Cloud: http://www.neplan.ch/neplanproduct/de-neplan-360-cloud
+# NEPLAN-Cloud-Connector-NCC
+This is a dll to connect to the NEPLAN Cloud.
+All about the NEPLAN Cloud: http://www.neplan.ch/neplanproduct/de-neplan-360-cloud
 
-The dll allows any other program to send neplan commands and inputs to Neplan Cloud and to get the results. The NCC.dll is developed for Matlab but it might also work in other programming languages.
+The dll allows any other program to send NEPLAN commands and inputs to NEPLAN Cloud and to get the results. The NCC.dll is developed for Matlab but it might also work in other programming languages.
 
 ## Requirements
-* Neplan Cloud account
-* The Neplan Cloud "Webservices module" has to be activated by Neplan for your account
+* NEPLAN Cloud account
+* The NEPLAN Cloud "Webservices module" by Neplan has to be activated for your account
 
 ## Howto
 Here is an example on how to use the dll in Matlab (tested in Matlab R2018a)
 ```Matlab
 % settings
-url =		"https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
+url = "https://demo.neplan.ch/NEPLAN360_Demo/Services/External/NeplanService.svc";
 username =	"username";
 pasword =	"password";
 project_name =	"Neplan_Project_X";
@@ -22,7 +22,7 @@ NCC_lib = NET.addAssembly([pwd,'\NCC.dll']);
 import System.*
 import DateTime.*
 
-% creat and open webservice 
+% creat and open webservice
 ws = NCC.Webservice(url,username,password);
 ws.Open();
 
